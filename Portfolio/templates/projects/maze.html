@@ -1,0 +1,36 @@
+{% extends "__template.html" %}
+{% set title="Maze Game" %}
+
+{% block style %} {% endblock %}
+{% block scripts %} {% endblock %}
+
+{% block body %}
+<h1>Dungeon Maze Game</h1>
+<div class="row">
+    <div class="s-xs-12 s-sm-12 s-md-6">
+        <div class="card">
+            <div class="title">Image</div>
+            <div class="content">
+                <img src="{{ url_for('static', filename='src/projects/maze1.png') }}" alt="Maze-Dungeon-Game-Maker-Project" width="100%">
+            </div>
+        </div>
+    </div>
+    <div class="s-xs-12 s-sm-12 s-md-6">
+        <div class="card">
+            <div class="title">Description</div>
+            <div class="content">
+                <h4 class="languages">Languages: GameMaker Language</h4>
+                <p>
+                    This game was made for my Vocational Tech class, made in game maker in colab with someone else, we together made the maze
+                    game where you have very little visibility by creating a mask and only creating "light" around the player and around
+                    torches around the map. This game was just for me to try and get used to masks and creating semi realistic lighting within
+                    a 2D game.
+                </p>
+                <a target="_blank" href="https://github.com/ebraptus/PuzzleGame">Github Source Code</a>
+                <br>
+                <a target="_blank" href="{{ url_for('static', filename='src/projects/PuzzleGame.exe') }}">Download Game (.exe)</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

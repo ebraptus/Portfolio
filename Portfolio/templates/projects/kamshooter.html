@@ -1,0 +1,31 @@
+{% extends "__template.html" %}
+{% set title="Kam Shooter" %}
+
+{% block style %} {% endblock %}
+{% block scripts %} {% endblock %}
+
+{% block body %}
+<h1>Kam Shooter</h1>
+<div class="row">
+    <div class="s-xs-12 s-sm-12 s-md-6">
+        <div class="card">
+            <div class="title">Image</div>
+            <div class="content">
+                <img src="{{ url_for('static', filename='src/projects/kam-shooter.jpg') }}" alt="Kam-Shooter-Project" width="100%">
+            </div>
+        </div>
+    </div>
+    <div class="s-xs-12 s-sm-12 s-md-6">
+        <div class="card">
+            <div class="title">Description</div>
+            <div class="content">
+                <h4 class="languages">Languages: TouchDevelopJS</h4>
+                <p>
+                    This was the final project for my Computer Applications class, The class taught game programming through touch develop which is now a retired game engine my microsoft, but the game was our final project as we took our group member Kam and our teacher and made them fight to the death. The game was just a simple demonstration that I knew the basics of game programming and database integration.
+                </p>
+                <a target="_blank" href="https://www.touchdevelop.com/zstknx">Touch Develop Game Link</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

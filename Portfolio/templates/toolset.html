@@ -1,0 +1,77 @@
+{% extends '__template.html' %}
+{% set title = "Toolset" %}
+
+{% block stylesheets %} {% endblock %}
+{% block scripts %} {% endblock %}
+
+{% set blockstyle = "s-xs-12 s-sm-12 s-md-6 s-lg-4" %}
+
+{% block body %}
+	<h1>Toolset</h1>
+	<div class="row row-stretch">
+		<div class="{{ blockstyle }}">
+			<div class="card">
+				<div class="title">Visual Studio 2015-2017</div>
+				<div class="content">
+					<div class="progress">
+						<div class="bar" style="width: 80%">80%</div>
+					</div>
+					<p>
+						Visual studio is my main IDE when working in C++ or any other language that Visual Studio supports. I have tried other IDEs
+						but Visual Studio has always had the best toolset and style for me. I have been working in visual studio for years and
+						I have mostly gotten used to all of the program, and all of its features. There are a few exclusions to this such as
+						I do not completly know the toolset for profiling and debugging programs but I know it enough to get what I need done.
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="{{ blockstyle }}">
+			<div class="card">
+				<div class="title">VI/VIM</div>
+				<div class="content">
+					<div class="progress">
+						<div class="bar" style="width: 40%">40%</div>
+					</div>
+					<p>
+						I have recently started using vim as of June 2017, this is quickly becoming one of my new favorite text editors/IDEs. Learning
+						the toolset is quite difficult but is very intuitive and I am learning tp use them to my advantage one step at a time.
+						I would say I know enough about this editor to be proficient, But not enough to get as much work done as I could in
+						something like atom or sublime. But I am learning more every time I use the program and slowly becoming better.
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="{{ blockstyle }}">
+			<div class="card">
+				<div class="title">Photoshop</div>
+				<div class="content">
+					<div class="progress">
+						<div class="bar" style="width: 70%">70%</div>
+					</div>
+					<p>
+						I have been working in photoshop for a few years on and off whenever I needed it. I took a visual design class focused around
+						photoshop, but I knew everything in the class already. I can get done what I need, but not without the help of google
+						and some time learning new tools now and then. But I am all around proficient in the program as a whole.
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="{{ blockstyle }}">
+			<div class="card">
+				<div class="title">Git</div>
+				<div class="content">
+					<div class="progress">
+						<div class="bar" style="width: 80%">80%</div>
+					</div>
+					<p>
+						I have used git to host all of my projects and I know my way around the problems that git can impose. I am no expert as I
+						only use it to host my projects. I have used it on some occasion to collab with friends on their projects.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

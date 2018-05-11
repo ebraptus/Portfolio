@@ -1,0 +1,25 @@
+<div id="header">
+	<img height="140px" src="{{ url_for('static', filename='src/me.jpg') }}" alt="John-De-Shano-DeShano">
+	<div class="logo">John de Shano</div>
+</div>
+
+<nav class="desktop">
+	<a class="left" href="{{ url_for('home') }}">Home</a>
+	<a class="center" href="{{ url_for('projects') }}">Projects</a>
+	<a class="center" href="{{ url_for('skills') }}">Skills</a>
+	<a class="center" href="{{ url_for('languages') }}">Languages</a>
+	<a class="center" href="{{ url_for('toolset') }}">Toolset</a>
+	<a class="center" href="{{ url_for('education') }}">Education</a>
+	<a class="right" href="{{ url_for('contact') }}">Contact</a>
+</nav>
+
+<div id="mobileNavToggle"><span class="fas fa-bars"></span></div>
+<nav class="mobile">
+	<a class="left" href="{{ url_for('home') }}">Home</a>
+	<a class="center" href="{{ url_for('projects') }}">Projects</a>
+	<a class="center" href="{{ url_for('skills') }}">Skills</a>
+	<a class="center" href="{{ url_for('languages') }}">Languages</a>
+	<a class="center" href="{{ url_for('toolset') }}">Toolset</a>
+	<a class="center" href="{{ url_for('education') }}">Education</a>
+	<a class="right" href="{{ url_for('contact') }}">Contact</a>
+</nav>

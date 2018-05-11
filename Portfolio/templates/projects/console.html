@@ -1,0 +1,33 @@
+{% extends "__template.html" %}
+{% set title="Console Application" %}
+
+{% block style %} {% endblock %}
+{% block scripts %} {% endblock %}
+
+{% block body %}
+<h1>Console Applicaton</h1>
+<div class="row">
+    <div class="s-xs-12 s-sm-12 s-md-6">
+        <div class="card">
+            <div class="title">Image</div>
+            <div class="content">
+                <img src="{{ url_for('static', filename='src/projects/console.jpg') }}" alt="Console-Application-CPP-Project" width="100%">
+            </div>
+        </div>
+    </div>
+    <div class="s-xs-12 s-sm-12 s-md-6">
+        <div class="card">
+            <div class="title">Description</div>
+            <div class="content">
+                <h4 class="languages">Languages: C++</h4>
+                <p>
+                    This project was just a simple project application, taking in arguments to make a command line interface to do simple actions
+                    and return certain results. This console app just included a help menu with a option to clear the console window, show
+                    all commands, and a rubiks cube scramble generator that I made just for the fun of it.
+                </p>
+                <a target="_blank" href="https://github.com/ebraptus/Console-Applicaton">Github Source Code</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
