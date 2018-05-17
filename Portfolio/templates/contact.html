@@ -6,9 +6,11 @@
 	<script src="{{ url_for('static', filename='js/contact.js') }}"></script>
 {% endblock %}
 
+{% set blockset = "s-xs-12 s-sm-12 s-md-6" %}
+
 {% block body %}
 	<div class="row row-stretch">
-		<div class="s6">
+		<div class="{{ blockset }}">
 			<div class="card">
 				<div class="title">Contact</div>
 				<div class="content">
@@ -16,7 +18,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="s6">
+		<div class="{{ blockset }}">
 			<div class="card">
 				<div class="title">Leave me a message</div>
 				<div class="content" style="overflow: auto;">
