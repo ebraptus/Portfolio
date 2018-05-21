@@ -19,16 +19,22 @@
         <div class="card">
             <div class="title">Description</div>
             <div class="content">
-                <h4 class="languages">Languages: GameMaker Language</h4>
+                <div>Languages: GameMaker Language</div>
                 <p>
                     This game was made for my Vocational Tech class, made in game maker in colab with someone else, we together made the maze
                     game where you have very little visibility by creating a mask and only creating "light" around the player and around
                     torches around the map. This game was just for me to try and get used to masks and creating semi realistic lighting within
                     a 2D game.
                 </p>
-                <a target="_blank" href="https://github.com/ebraptus/PuzzleGame">Github Source Code</a>
-                <br>
-                <a target="_blank" href="{{ url_for('static', filename='src/projects/PuzzleGame.exe') }}">Download Game (.exe)</a>
+                <p>
+                    What I learned from making this game:
+                    <li>Better collision with players hitting walls</li>
+                    <li>Using masks to create a lighting system</li>
+                    <li>Creating trace rays for better lighting and collision</li>
+                    <li>Gameplay mechanics and how they relate to the game as a whole and how to improve apon them</li>
+                </p>
+                <a class="btn btn-full" target="_blank" href="https://github.com/ebraptus/PuzzleGame">Github Source Code</a><br><br>
+                <a class="btn btn-full" target="_blank" href="{{ url_for('static', filename='src/projects/PuzzleGame.exe') }}">Download Game (.exe)</a>
             </div>
         </div>
     </div>
