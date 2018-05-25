@@ -1,1 +1,1 @@
-uwsgi -s /tmp/yourapplication.sock --manage-script-name --mount /yourapplication=prod:app
+uwsgi --ini portfolio.ini
