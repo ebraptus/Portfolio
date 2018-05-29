@@ -2,21 +2,37 @@
 @danger-color: #F44336;
 
 body{
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Lato', Arial, sans-serif;
 	margin: 0;
 	padding: 0;
 	background-color: #EEE;
-}
+	font-size: 16px;
+	line-height: 1.6;
 
+	& > *:first-child {
+		margin-top: 0 !important;
+	}
+	& > *:last-child {
+		margin-bottom: 0 !important;
+	}
+}
+  
 a{
 	text-decoration: none;
-	color: inherit;
+	&:visited{
+		color: blue;
+	}
 }
 
-h1, h2, h3, h4, h5, h6{
+h1, h2, h3, h4, h5, h6 {
+	-webkit-font-smoothing: antialiased;
 	font-family: 'Oswald', sans-serif;
-    margin: 0;
-    color: #212529;
+	color: #212529;
+	margin: 20px 0 10px;
+	padding: 0;
+	font-weight: bold;
+	cursor: text;
+	position: relative;
 }
 
 .right{
@@ -76,7 +92,7 @@ h1, h2, h3, h4, h5, h6{
 	
 	&.float, &:focus{
 		border-bottom: solid 2px @main-color;
-		&+label{
+		& + label{
 			color: @main-color;
 			bottom: 55px;
 			font-size: 14px;
