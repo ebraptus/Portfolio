@@ -68,6 +68,9 @@ nav.desktop {
   flex-direction: row;
   z-index: 1000;
 }
+nav.desktop a {
+  color: white;
+}
 nav.desktop a:after {
   display: block;
   content: '';

@@ -110,7 +110,7 @@ h6 {
   padding: 8px 15px;
   background-color: #0288D1;
   border: solid 1px #0298ea;
-  color: white;
+  color: white !important;
   font-size: 18px;
   border-radius: 2px;
 }
