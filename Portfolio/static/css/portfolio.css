@@ -50,6 +50,12 @@
   color: white;
   transition: all 200ms ease-in-out;
 }
+body.sticky nav.desktop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
 nav {
   background-color: #1c2429;
 }
@@ -121,6 +127,9 @@ body.showMobileNav #mobileNavToggle {
 }
 body.showMobileNav nav {
   left: 0 !important;
+}
+body.sticky #content {
+  margin-top: 60px;
 }
 #content {
   margin-top: 20px;

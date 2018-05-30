@@ -1,3 +1,13 @@
+$(window).scroll(function(){
+	var margin = document.getElementById("header").scrollHeight;
+
+	if(window.pageYOffset >= margin){
+		$("body").addClass("sticky");
+	}else{
+		$("body").removeClass("sticky");
+	}
+});
+
 $(".inputText").each(function(){
 	$(this).addClass('valid')
 	if($(this).val() != ""){
