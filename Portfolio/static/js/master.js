@@ -1,4 +1,8 @@
 $(window).scroll(function(){
+	updateHeader();
+});
+
+function updateHeader(){
 	var margin = document.getElementById("header").scrollHeight;
 
 	if(window.pageYOffset >= margin){
@@ -6,7 +10,8 @@ $(window).scroll(function(){
 	}else{
 		$("body").removeClass("sticky");
 	}
-});
+}
+updateHeader();
 
 $(".inputText").each(function(){
 	$(this).addClass('valid')
