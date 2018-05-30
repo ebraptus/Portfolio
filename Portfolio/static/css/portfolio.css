@@ -27,8 +27,8 @@
   color: white;
   background-image: url("../src/banner.jpg");
   background-repeat: no-repeat;
-  background-size: 100%;
-  background-position-y: -650px;
+  background-size: 1920px 1080px;
+  background-position-y: -300px;
 }
 #header .info {
   transform: translateY(50%);
@@ -73,9 +73,6 @@ nav.desktop {
   flex-direction: row;
   z-index: 1000;
 }
-nav.desktop a {
-  color: white;
-}
 nav.desktop a:after {
   display: block;
   content: '';
@@ -115,7 +112,7 @@ nav a {
   flex: 1;
   text-align: center;
   display: block;
-  color: white;
+  color: white !important;
   background-color: #1c2429;
   transition: all 100ms ease-in-out;
 }
