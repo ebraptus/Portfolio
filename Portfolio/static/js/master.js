@@ -73,3 +73,15 @@ $('body,html').click(function(e){
 		$("body").removeClass('showMobileNav');
 	}
 });
+
+$(".card").each(function(){
+	if($(this).has(".footer")){
+		var iHeight = 0;
+		$(this).children().each(function(){
+			if($(this).hasClass("footer")){
+				iHeight += $(this).height();
+			}
+		})
+		$(this).css("margin-bottom", iHeight);
+	}	
+})

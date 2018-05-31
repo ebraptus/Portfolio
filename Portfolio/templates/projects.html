@@ -11,70 +11,33 @@
 
 {% block body %}
 <h1>Projects</h1>
-<div class="row row-stretch">
+<div class="row">
 	<div class="{{ blockset }}">
-		<div class="card">
-			<div class="title">Dungeon Maze Game</div>
-			<div class="content">
-				<img src="{{ url_for('static', filename='src/projects/maze1.png') }}" alt="Project-Dungeon-Maze-Game" width="100%">
-				<p>
-					A game made in my Vocational Tech game where its a dungeon game here you navigate the maze with little light to navigate
-					the maze with memory.
-				</p>
-			</div>
-			<div class="footer">
-				<a href="{{ url_for('project_maze') }}" class="btn btn-full">More Info</a>
-			</div>
-		</div>
-	</div>
-
-	<div class="{{ blockset }}">
-		<div class="card">
-			<div class="title">Portfolio Website</div>
-			<div class="content">
+		<a href="{{ url_for('project_portfolio') }}" class="card-selectable">
 				<img class="image" src="{{ url_for('static', filename='src/projects/portfolio.jpg') }}" alt="Project-Portfolio" width="100%">
-				<p>
-					The website you are currently viewing... This website was made to showcase some of my talents and show off my projects. This
-					website first was coded in HTML/CSS/JS/PHP, But was later converted into HTML/LESS/JS/Python Flask.
-				</p>
-			</div>
-			<div class="footer">
-				<a href="{{ url_for('project_portfolio') }}" class="btn btn-full">More Info</a>
-			</div>
-		</div>
+			<div class="title white">Portfolio Website</div>
+		</a>
 	</div>
 
 	<div class="{{ blockset }}">
-		<div class="card">
-			<div class="title">Kam Shooter</div>
-			<div class="content">
-				<img src="{{ url_for('static', filename='src/projects/kam-shooter.jpg') }}" alt="Project-Kam-Shooter" width="100%">
-				<p>
-					A game made for my high school computer science class. The game is a basic arcade shooter using AD and the mouse for shooting
-					projectiles and doging them
-				</p>
-			</div>
-			<div class="footer">
-				<a href="{{ url_for('project_kamshooter') }}" class="btn btn-full">More Info</a>
-			</div>
-		</div>
+		<a href="{{ url_for('project_kamshooter') }}" class="card-selectable">
+			<img src="{{ url_for('static', filename='src/projects/kam-shooter.jpg') }}" alt="Project-Kam-Shooter" width="100%">
+			<div class="title white">Kam Shooter</div>
+		</a>
 	</div>
 
 	<div class="{{ blockset }}">
-		<div class="card">
-			<div class="title">Console</div>
-			<div class="content">
-				<img src="{{ url_for('static', filename='src/projects/console.jpg') }}" alt="Project-Console" width="100%">
-				<p>
-					A basic C++ application I used to get into the basics of C++. This project was just a little test making simple features
-					like using the comand like and taking in information and replying based on that information. This little console application
-					just has the feature to list off all commands and then has a built in Rubiks' Cube scrambler.
-				</p>
-			</div>
-			<div class="footer">
-				<a href="{{ url_for('project_console') }}" class="btn btn-full">More Info</a>
-			</div>
-		</div>
+		<a href="{{ url_for('project_console') }}" class="card-selectable">
+			<img src="{{ url_for('static', filename='src/projects/console.jpg') }}" alt="Project-Console" width="100%">
+			<div class="title white">Console</div>
+		</a>
+	</div>
+
+	<div class="{{ blockset }}">
+		<a href="{{ url_for('project_maze') }}" class="card-selectable">
+			<img src="{{ url_for('static', filename='src/projects/maze1.png') }}" alt="Project-Dungeon-Maze-Game" width="100%">
+			<div class="title white">Dungeon Maze Game</div>
+		</a>
 	</div>
 </div>
 {% endblock %}

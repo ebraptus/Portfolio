@@ -33,39 +33,72 @@ h6 {
   cursor: text;
   position: relative;
 }
+.white {
+  color: white !important;
+}
+.mute {
+  color: #777;
+}
 .right {
   float: right;
 }
-.card {
-  background-color: white;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
-  border-radius: 2px;
-  width: 100%;
-  margin-bottom: 25px;
-  height: 100%;
+.card,
+.card-selectable {
+  border-radius: 5px;
   position: relative;
+  display: block;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
 }
-.card .title {
+.card img,
+.card-selectable img {
+  transition: all 250ms;
+  border-radius: 5px;
+  display: block;
+}
+.card.card-selectable,
+.card-selectable.card-selectable {
+  overflow: hidden;
+}
+.card.card-selectable:hover img,
+.card-selectable.card-selectable:hover img {
+  filter: grayscale(100%);
+  transform: scale(1.2);
+}
+.card.card-selectable img + .title,
+.card-selectable.card-selectable img + .title {
+  display: block;
+  position: absolute;
+  top: 0px;
+  text-align: center;
+  width: 100%;
+}
+.card .title,
+.card-selectable .title {
+  font-family: 'Oswald', sans-serif;
   font-size: 22px;
   color: #424242;
   padding: 15px;
   padding-bottom: 0;
-  font-family: 'Oswald', sans-serif;
 }
-.card .content {
-  padding: 20px;
-  padding-top: 30px;
+.card .content,
+.card-selectable .content {
+  padding: 10px 20px;
 }
-.card .content > p:first-child {
+.card .content > p:first-child,
+.card-selectable .content > p:first-child {
   padding: 0;
   margin: 0;
 }
-.card .footer {
+.card .footer,
+.card-selectable .footer {
   position: absolute;
-  bottom: 0;
-  height: 50px;
-  padding: 0 20px;
-  width: 100%;
+  bottom: 10px;
+  left: 0;
+  width: calc(100% - 20px);
+  margin: 0 10px;
 }
 .inputText {
   width: 100%;
@@ -154,7 +187,8 @@ h6 {
   background-color: #d3efff;
   width: 100%;
 }
-.progress .bar {
+.progress .bar[percent] {
+  width: attr(percent, px);
   display: block;
   background-color: #0288D1;
   text-align: center;
@@ -163,4 +197,7 @@ h6 {
   line-height: 15px;
   font-size: 12px;
   border-radius: 2px;
+}
+.progress .bar[percent]::after {
+  content: attr(percent) "%";
 }

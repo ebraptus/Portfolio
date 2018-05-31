@@ -35,39 +35,73 @@ h1, h2, h3, h4, h5, h6 {
 	position: relative;
 }
 
+.white{
+	color: white !important;
+}
+
+.mute{
+	color: #777;
+}
+
 .right{
     float: right;
 }
 
-.card{
-	background-color: white;
-	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12),0 3px 1px -2px rgba(0,0,0,0.2);
-    border-radius: 2px;
-	width: 100%;
-	margin-bottom: 25px;
-	height: 100%;
+.card, .card-selectable{
+	border-radius: 5px;
 	position: relative;
+	display: block;
+	background-color: white;
+	width: 100%;
+	height: 100%;
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+
+	img{
+		transition: all 250ms;
+		border-radius: 5px;
+		display: block;
+	}
+
+	&.card-selectable{
+		overflow: hidden;
+		&:hover{
+			img{
+				filter: grayscale(100%);
+				transform: scale(1.2);
+			}
+		}
+
+		img + .title{
+			display: block;
+			position: absolute;
+			top: 0px;
+			text-align: center;
+			width: 100%;
+		}
+	}
+
 	.title{
+		font-family: 'Oswald', sans-serif;
 		font-size: 22px;
 		color: #424242;
 		padding: 15px;
 		padding-bottom: 0;
-		font-family: 'Oswald', sans-serif;
 	}
+
 	.content{
-		padding: 20px;
-		padding-top: 30px;
+		padding: 10px 20px;
 		& > p:first-child{
 			padding: 0;
 			margin: 0;
-		}
+		}		
 	}
+
 	.footer{
 		position: absolute;
-		bottom: 0;
-		height: 50px;
-		padding: 0 20px;
-		width: 100%;
+		bottom: 10px;
+		left: 0;
+		width: calc(~"100% - 20px");
+		margin: 0 10px;
 	}
 }
 
@@ -164,7 +198,8 @@ h1, h2, h3, h4, h5, h6 {
     display: block;
     background-color: lighten(@main-color, 50);
     width: 100%;
-    .bar{
+    .bar[percent]{
+		width: attr(percent, px);
         display: block;
         background-color: @main-color;
         text-align: center;
@@ -172,6 +207,9 @@ h1, h2, h3, h4, h5, h6 {
         height: 15px;
         line-height: 15px;
         font-size: 12px;
-        border-radius: 2px;
+		border-radius: 2px;
+		&::after{
+			content: attr(percent) + "%";
+		}
     }
 }
