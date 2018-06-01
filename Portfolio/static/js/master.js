@@ -96,3 +96,11 @@ $("#contactForm").submit(function(event){
 		}
 	})
 })
+
+$(".progress").each(function(){
+	$(this).children().each(function(){
+		if($(this).hasClass("bar")){
+			$(this).css("width", $(this).attr("data-percent") + "%");
+		}
+	})
+})

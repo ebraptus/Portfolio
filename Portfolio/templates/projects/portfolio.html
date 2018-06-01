@@ -1,13 +1,12 @@
 {% extends "__template.html" %}
 
 {% block body %}
-<h1>Portfolio Project</h1>
 <div class="row">
     <div class="s-xs-12 s-sm-12 s-md-6">
         <div class="card">
             <div class="title">Image</div>
             <div class="content">
-                <img src="{{ url_for('static', filename='src/projects/portfolio.jpg') }}" alt="Portfolio-Picture-Project-Website" width="100%">
+                <img src="{{ url_for('portfolio.static', filename='src/projects/portfolio.jpg') }}" alt="Portfolio-Picture-Project-Website" width="100%">
             </div>
         </div>
     </div>
