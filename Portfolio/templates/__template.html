@@ -3,25 +3,23 @@
 	<head>
 		<!-- Meta Data -->
 		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="hostname" content="johndeshano.me">
 		<meta name="expected-hostname" content="johndeshano.me">
-
-		<title>{{ title }} - John de Shano</title>
-
-		<!-- Meta Tags -->
 		<meta name="description" content="The portfolio of John de Shano, this page is used to show off all of my talents and the projects I have done in the past and what I plan for the future.">
 		<meta name="keywords" content="Portfolio,John,de,Shano,DeShano,JohnDeShano,CSS,HTML,JS,JavaScript,PHP,Flask,Python,C++,Game,Developer,Security,Researcher,Debugger,MTA,Wayne">
 		<meta name="author" content="John de Shano">
 
-		<!-- Font Awesome -->
-		<link href="https://fonts.googleapis.com/css?family=Lato|Roboto" rel="stylesheet">
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+		<!-- Title -->
+		<title>{{ title }} - John de Shano</title>
 
-		<link rel="stylesheet" href="{{ url_for('static', filename='css/grid.css') }}">
-		<link rel="stylesheet" href="{{ url_for('static', filename='css/master.css') }}">
-		<link rel="stylesheet" href="{{ url_for('static', filename='css/portfolio.css') }}">
+		<link rel="stylesheet" media="all" href="{{ url_for('static', filename='css/all.css') }}">
+
+		<link rel="stylesheet" media="all" href="https://fonts.googleapis.com/css?family=Lato|Roboto">
+		<link rel="stylesheet" media="all" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+
 		{% block stylesheets %} {% endblock %}
 	</head>
 	<body>
