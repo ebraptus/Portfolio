@@ -1,6 +1,6 @@
 from flask import Blueprint, render_template
 
-portfolio = Blueprint("portfolio", __name__, template_folder="templates", static_folder="static", static_url_path="/static/portfolio/")
+portfolio = Blueprint("portfolio", __name__, template_folder="templates", static_folder="static", static_url_path="/static/portfolio")
 
 @portfolio.errorhandler(404)
 def page_not_found(error):
