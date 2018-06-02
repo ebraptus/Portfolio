@@ -4,7 +4,7 @@ from CDN import cdn
 
 app = Flask(__name__)
 
-app.config["SERVER_NAME"] = "local:2020"
+app.config["SERVER_NAME"] = "localhost:2020"
 
 app.register_blueprint(portfolio)
 app.register_blueprint(cdn, subdomain="cdn")
