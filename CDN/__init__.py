@@ -4,4 +4,4 @@ cdn = Blueprint("CDN", __name__, template_folder="templates", static_folder="sta
 
 @cdn.route("/")
 def home():
-    return render_template("home.html")
+    return render_template("cdn/home.html")
