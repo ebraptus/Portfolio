@@ -7,4 +7,4 @@ app.register_blueprint(portfolio)
 app.register_blueprint(cdn)
 
 if __name__ == "__main__":
-	app.run(debug=True, host="0.0.0.0", port=2020)
+	app.run(host="0.0.0.0", port="2020", debug=True)
