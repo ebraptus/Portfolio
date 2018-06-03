@@ -15,8 +15,8 @@
 		<!-- Title -->
 		<title>{{ title }} - John de Shano</title>
 
-		<link rel="stylesheet" media="all" href="{{ url_for('portfolio.static', filename='css/grid.css') }}">
-		<link rel="stylesheet" media="all" href="{{ url_for('portfolio.static', filename='css/master.css') }}">
+		<link rel="stylesheet" media="all" href="{{ url_for('cdn.static', filename='css/grid.css') }}">
+		<link rel="stylesheet" media="all" href="{{ url_for('cdn.static', filename='css/master.css') }}">
 		<link rel="stylesheet" media="all" href="{{ url_for('portfolio.static', filename='css/portfolio.css') }}">
 
 		<link rel="stylesheet" media="all" href="https://fonts.googleapis.com/css?family=Lato|Roboto">
@@ -32,9 +32,9 @@
 			{% block body %} {% endblock %}
 		</div>
 
-		<script src="{{ url_for('portfolio.static', filename='js/jquery-3.3.1.min.js') }}"></script>
-		<script src="{{ url_for('portfolio.static', filename='js/bootstrap.min.js') }}"></script>
-		<script src="{{ url_for('portfolio.static', filename='js/master.js') }}"></script>
+		<script src="{{ url_for('cdn.static', filename='js/jquery-3.3.1.min.js') }}"></script>
+		<script src="{{ url_for('cdn.static', filename='js/master.js') }}"></script>
+		<script src="{{ url_for('portfolio.static', filename='js/portfolio.js') }}"></script>
 		{% block scripts %} {% endblock %}
 	</body>
 </html>
