@@ -6,9 +6,12 @@ I made this just to show off my skills. But here is where all the information is
 
 ## Deployment
 
-I used UWSGI NGINX and Python Flask to deploy this
+Installing the required packages
+
+`sudo apt-get build-essential python python-dev`
 
 Installing pip requirements
+
 `pip install -r requirements.txt`
 
 NGINX site config:
@@ -26,14 +29,16 @@ server{
 ```
 
 Running the UWSGI Server:
-```uwsgi --ini portfolio.ini```
+
+`uwsgi --ini portfolio.ini`
 
 ## Built With
-* [NGINX](https://www.nginx.com/)
-* [uWSGI](https://uwsgi-docs.readthedocs.io/en/latest/)
-* [Python Flask](http://flask.pocoo.org/)
-* [Jinja2](http://jinja.pocoo.org/)
-* [jQuery](http://jquery.com/)
-* [Google Fonts](https://fonts.google.com/)
-* [Font Awesome](https://fontawesome.com/)
-* [Sweet Alerts 2](https://sweetalert2.github.io/)
+
+* [NGINX](https://www.nginx.com/) - Used to serve the website to the user
+* [uWSGI](https://uwsgi-docs.readthedocs.io/en/latest/) - Used to link python flask to NGINX
+* [Python Flask](http://flask.pocoo.org/) - Used to generate the data for the user
+* [Jinja2](http://jinja.pocoo.org/) - Used to template all of the pages and put information in the page
+* [jQuery](http://jquery.com/) - JavaScript library to make life easy
+* [Google Fonts](https://fonts.google.com/) - Fonts supplied by google
+* [Font Awesome](https://fontawesome.com/) - Sweet icons
+* [Sweet Alerts 2](https://sweetalert2.github.io/) - Better alert boxes
