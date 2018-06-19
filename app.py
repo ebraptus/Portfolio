@@ -7,6 +7,7 @@ app = Flask(__name__)
 app.config["SERVER_NAME"] = "johndeshano.me"
 
 app.register_blueprint(portfolio)
+app.register_blueprint(portfolio, subdomain="www")
 app.register_blueprint(cdn, subdomain="cdn")
 
 if __name__ == "__main__":
