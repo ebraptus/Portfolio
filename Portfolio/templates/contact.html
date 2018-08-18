@@ -1,6 +1,6 @@
 {% extends '__template.html' %}
 
-{% set blockset = "s-xs-12 s-sm-12 s-md-6" %}
+{% set blockset = "s-xs-12 s-sm-12 s-md-12 s-lg-6 s-lg-offset-3" %}
 
 {% block body %}
 	<div class="row row-stretch">
@@ -8,30 +8,7 @@
 			<div class="card">
 				<div class="title">Contact</div>
 				<div class="content">
-					You can contact me by leaving me an email at: themaxtwo2@gmail.com or messaging me on one of my many social media platforms listed on the about me page.
-				</div>
-			</div>
-		</div>
-		<div class="{{ blockset }}">
-			<div class="card">
-				<div class="title">Leave me a message</div>
-				<div class="content" style="overflow: auto;">
-					<form method="POST" id="contactForm">
-						<!-- Contact Name -->
-						<input required maxlength="255" type="text" name="name" class="inputText">
-						<label>Contact Name</label>
-
-						<!-- Email Address -->
-						<input required maxlength="255" type="text" name="email" class="inputText">
-						<label>Email Address</label>
-
-						<!-- Message -->
-						<input required maxlength="2500" type="text" name="message" class="inputText">
-						<label>Message</label>
-
-						<!-- Submit -->
-						<button type="submit" class="btn right">Send</button>
-					</form>
+					You can contact me by leaving me an email at: <a href="mailto:john@johndeshano.me">john@johndeshano.me</a> or messaging me on one of my many social media platforms listed on the about me page.
 				</div>
 			</div>
 		</div>

@@ -14,13 +14,6 @@ body {
     box-sizing: inherit;
 }
 
-.container {
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-}
-
 .container-fluid {
     padding-right: 15px;
     padding-left: 15px;
@@ -28,25 +21,33 @@ body {
     margin-left: auto;
 }
 
-@media screen and (min-width: 576px) {
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 576px) {
     .container {
         max-width: 540px;
     }
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
     .container {
         max-width: 720px;
     }
 }
 
-@media screen and (min-width: 992px) {
+@media (min-width: 992px) {
     .container {
         max-width: 960px;
     }
 }
 
-@media screen and (min-width: 1200px) {
+@media (min-width: 1200px) {
     .container {
         max-width: 1140px;
     }
@@ -87,9 +88,11 @@ body {
         display: none;
     }
     .gen-columns-xs(12);
-
     .gen-columns-xs(@n, @i: 1) when (@i =< @n) {
-        .s-sm-@{i} {
+        .s-xs-offset-@{i} {
+            margin-left: (@i * 100% / @n);
+        }
+        .s-xs-@{i} {
             -ms-flex: 0 0 (@i * 100% / @n);
             flex: 0 0 (@i * 100% / @n);
             max-width: (@i * 100% / @n);
@@ -103,8 +106,10 @@ body {
         display: none;
     }
     .gen-columns-sm(12);
-
     .gen-columns-sm(@n, @i: 1) when (@i =< @n) {
+        .s-sm-offset-@{i} {
+            margin-left: (@i * 100% / @n);
+        }
         .s-sm-@{i} {
             -ms-flex: 0 0 (@i * 100% / @n);
             flex: 0 0 (@i * 100% / @n);
@@ -119,8 +124,10 @@ body {
         display: none;
     }
     .gen-columns-md(12);
-
     .gen-columns-md(@n, @i: 1) when (@i =< @n) {
+        .s-md-offset-@{i} {
+            margin-left: (@i * 100% / @n);
+        }
         .s-md-@{i} {
             -ms-flex: 0 0 (@i * 100% / @n);
             flex: 0 0 (@i * 100% / @n);
@@ -135,8 +142,10 @@ body {
         display: none;
     }
     .gen-columns-lg(12);
-
     .gen-columns-lg(@n, @i: 1) when (@i =< @n) {
+        .s-lg-offset-@{i} {
+            margin-left: (@i * 100% / @n);
+        }
         .s-lg-@{i} {
             -ms-flex: 0 0 (@i * 100% / @n);
             flex: 0 0 (@i * 100% / @n);
@@ -151,9 +160,11 @@ body {
         display: none;
     }
     .gen-columns-xl(12);
-
     .gen-columns-xl(@n, @i: 1) when (@i =< @n) {
-        .s-lg-@{i} {
+        .s-xl-@{i} {
+            .s-xl-offset-@{i} {
+                margin-left: (@i * 100% / @n);
+            }
             -ms-flex: 0 0 (@i * 100% / @n);
             flex: 0 0 (@i * 100% / @n);
             max-width: (@i * 100% / @n);
@@ -161,7 +172,6 @@ body {
         .gen-columns-xl(@n, (@i + 1));
     }
 }
-
 
 .s-xs-1,
 .s-xs-2,
