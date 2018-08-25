@@ -1,0 +1,38 @@
+{% extends "webpage/__template.html" %}
+
+{% block body %}
+<div class  ="row">
+    <div class="s-xs-12 s-sm-12 s-md-6">
+        <div class="card">
+            <div class="title">Image</div>
+            <div class="content">
+                <img src="{% static 'webpage/src/projects/kam-shooter.jpg' %}" alt="Kam-Shooter-Project" width="100%">
+            </div>
+        </div>
+    </div>
+    <div class="s-xs-12 s-sm-12 s-md-6">
+        <div class="card">
+            <div class="title">Description</div>
+            <div class="content">
+                <h3>Languages</h3>
+                <ul>
+                    <li>TouchDevelopJS</li>
+                </ul>
+
+                <h3>Description</h3>
+                <p>
+                    This was the final project for my Computer Applications class, The class taught game programming through touch develop which is now a retired game engine my microsoft, but the game was our final project as we took our group member Kam and our teacher and made them fight to the death. The game was just a simple demonstration that I knew the basics of game programming and database integration.
+                </p>
+                
+                <h3>What I learned from making this game</h3>
+                <ul>
+                    <li>Creating enemies and templating them so that they are indipendent but dont need seperate code</li>
+                    <li>Creating enemies that shoot at the player and predict the players position and where they are going to move next</li>
+                    <li>Networking behind making a database that holds all the leaderboard data and updates it with every game</li>
+                </ul>
+                <a class="btn btn-full" target="_blank" href="https://www.touchdevelop.com/zstknx">Touch Develop Game Link</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

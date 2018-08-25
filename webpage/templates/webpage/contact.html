@@ -1,0 +1,24 @@
+{% extends 'webpage/__template.html' %}
+
+{% block body %}
+{% with "s-xs-12 s-sm-12 s-md-6" as blockset %}
+	<div class="row row-stretch">
+		<div class="{{ blockset }}">
+			<div class="card">
+				<div class="title">Contact</div>
+				<div class="content">
+					You can contact me by leaving me an email at: <a href="mailto:john@johndeshano.me">john@johndeshano.me</a>
+				</div>
+			</div>
+		</div>
+		<div class="{{ blockset }}">
+			<div class="card">
+				<div class="title">Social Media</div>
+				<div class="content">
+					<a target="_blank" href="http://www.linkedin.com/in/johndeshano" class="btn social-button"><i class="fab fa-linkedin-in "></i>LinkedIn</a>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endwith %}	
+{% endblock %}

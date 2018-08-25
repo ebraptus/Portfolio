@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<!-- Meta Data -->
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="hostname" content="johndeshano.me">
+		<meta name="expected-hostname" content="johndeshano.me">
+		<meta name="description" content="The portfolio of John de Shano, this page is used to show off all of my talents and the projects I have done in the past and what I plan for the future.">
+		<meta name="keywords" content="Portfolio,John,de,Shano,DeShano,JohnDeShano,CSS,HTML,JS,JavaScript,PHP,Flask,Python,C++,Game,Developer,Security,Researcher,Debugger,MTA,Wayne">
+		<meta name="author" content="John de Shano">
+
+		<!-- Title -->
+		<title>{{ title }} - John de Shano</title>
+		<link rel="stylesheet" media="all" href="{% static 'webpage/css/grid.css' %}">
+		<link rel="stylesheet" media="all" href="{% static 'webpage/css/master.css' %}">
+		<link rel="stylesheet" media="all" href="{% static 'webpage/css/portfolio.css' %}">
+
+		<link rel="stylesheet" media="all" href="https://fonts.googleapis.com/css?family=Lato|Roboto">
+		<link rel="stylesheet" media="all" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+
+		{% block stylesheets %} {% endblock %}
+	</head>
+	<body>
+		{% include 'webpage/_header.html' %}
+
+		<div class="container" id="content">
+			<h1>{{ title }}</h1>
+			{% block body %} {% endblock %}
+		</div>
+
+		<script src="{% static 'webpage/js/jquery-3.3.1.min.js' %}"></script>
+		<script src="{% static 'webpage/js/sweetalert2.js' %}"></script>
+		<script src="{% static 'webpage/js/master.js' %}"></script>
+		<script src="{% static 'webpage/js/portfolio.js' %}"></script>
+		{% block scripts %} {% endblock %}
+	</body>
+</html>

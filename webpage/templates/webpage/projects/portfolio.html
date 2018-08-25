@@ -1,0 +1,54 @@
+{% extends "webpage/__template.html" %}
+
+{% block body %}
+<div class="row">
+    <div class="s-xs-12 s-sm-12 s-md-6">
+        <div class="card">
+            <div class="title">Image</div>
+            <div class="content">
+                <img src="{% static 'webpage/src/projects/portfolio.jpg' %}" alt="Portfolio-Picture-Project-Website" width="100%">
+            </div>
+        </div>
+    </div>
+    <div class="s-xs-12 s-sm-12 s-md-6">
+        <div class="card">
+            <div class="title">Description</div>
+            <div class="content">
+                <h3>Languages</h3>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS [LESS PreProcessor]</li>
+                    <li>JavaScript</li>
+                    <li>Python</li>
+                </ul>
+
+                <h3>Built With</h3>
+                <ul>
+                    <li><a target="_blank" href="https://www.nginx.com/">NGINX</a> - Used for serving the web pages</li>
+                    <li><a target="_blank" href="http://flask.pocoo.org/">Python Flask</a> - The Web Framework</li>
+                    <li><a target="_blank" href="http://jinja.pocoo.org/">Jinja2</a> - Page templating</li>
+                    <li><a target="_blank" href="https://uwsgi-docs.readthedocs.io/en/latest/">uWSGI</a> - For deployment of the web server</li>
+                    <li><a target="_blank" href="https://fonts.google.com/">Google Fonts</a> - For font management</li>
+                    <li><a target="_blank" href="https://jquery.com/">jQuery</a> - JavaScript Library</li>
+                    <li><a target="_blank" href="https://fontawesome.com/">Font Awesome</a> - For the <i>awesome</i> icons</li>
+                </ul>
+
+                <h3>Description</h3>
+                <p>
+                    This is the website you are currently reading this off of. This was a project of mine that I needed to show myself off showing
+                    some of my projects, my skills, and the tools I use to make everything.
+                </p>
+
+                <h3>What I learned from making this website:</h3>
+                <ul>
+                    <li>Using flask to serve data to the user without exposing any data</li>
+                    <li>Using uWSGI to deploy the web server using sockets to connect to NGINX</li>
+                    <li>Creating a website using templates so that the pages are consistant and easy to make</li>
+                    <li>Better CSS styling when it comes to mobile design and making more responsive websites</li>
+                </ul>
+                <a target="_blank" href="https://gitlab.com/ebraptus/Portfolio" class="btn btn-full">Gitlab source code</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
