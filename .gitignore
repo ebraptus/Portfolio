@@ -3,4 +3,5 @@
 /env
 /.vscode
 /Portfolio/secret.py
+/static
 */__pycache__
