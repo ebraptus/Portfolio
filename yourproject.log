@@ -1,0 +1,59 @@
+*** Starting uWSGI 2.0.17.1 (64bit) on [Fri Sep 14 02:53:40 2018] ***
+compiled with version: 5.4.0 20160609 on 25 August 2018 23:58:11
+os: Linux-4.4.0-134-generic #160-Ubuntu SMP Wed Aug 15 14:58:00 UTC 2018
+nodename: Server
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /var/www/Portfolio
+writing pidfile to /tmp/project-master.pid
+detected binary path: /var/www/Portfolio/env/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+setgid() to 33
+setuid() to 33
+chdir() to ./
+your processes number limit is 7927
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+Python version: 3.5.2 (default, Nov 23 2017, 16:37:01)  [GCC 5.4.0 20160609]
+Set PythonHome to ./env
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x26afbd0
+The -s/--socket option is missing and stdin is not a socket.
+*** Starting uWSGI 2.0.17.1 (64bit) on [Fri Sep 14 02:56:12 2018] ***
+compiled with version: 5.4.0 20160609 on 25 August 2018 23:58:11
+os: Linux-4.4.0-134-generic #160-Ubuntu SMP Wed Aug 15 14:58:00 UTC 2018
+nodename: Server
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /var/www/Portfolio
+writing pidfile to /tmp/project-master.pid
+detected binary path: /var/www/Portfolio/env/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+setgid() to 33
+setuid() to 33
+chdir() to ./
+your processes number limit is 7927
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /tmp/portfolio.sock fd 3
+Python version: 3.5.2 (default, Nov 23 2017, 16:37:01)  [GCC 5.4.0 20160609]
+Set PythonHome to ./env
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x23dadc0
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145808 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x23dadc0 pid: 6954 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 6954)
+spawned uWSGI worker 1 (pid: 6957, cores: 1)
+[pid: 6957|app: 0|req: 1/1] 68.34.73.95 () {44 vars in 723 bytes} [Fri Sep 14 02:56:16 2018] GET / => generated 3556 bytes in 26 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 6957|app: 0|req: 2/2] 68.34.73.95 () {46 vars in 724 bytes} [Fri Sep 14 02:56:17 2018] GET /favicon.ico => generated 85 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 6957|app: 0|req: 3/3] 66.249.66.25 () {36 vars in 526 bytes} [Fri Sep 14 02:56:52 2018] GET /robots.txt => generated 84 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
