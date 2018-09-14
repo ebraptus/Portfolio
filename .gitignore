@@ -1,4 +1,6 @@
-*.pyc
+*.py
+*.DS_Store
 /env
 /.vscode
 /Portfolio/secret.py
+*/__pycache__
