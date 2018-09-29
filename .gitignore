@@ -1,7 +1,7 @@
-*.py
+Portfolio/secret.py
+*.pyc
 *.DS_Store
-/env
-/.vscode
-/Portfolio/secret.py
-/static
 */__pycache__
+/env
+/static
+/.vscode
