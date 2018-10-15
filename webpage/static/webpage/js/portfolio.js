@@ -44,17 +44,3 @@ $('body,html').bind("touchmove", function (e) {
         $("body").removeClass('showMobileNav');
     }
 });
-
-$("#contactForm").submit(function(event) {
-    event.preventDefault();
-
-    $.post("/contact/", $("#contactForm").serialize(), function (data) {
-        var iReturn = parseInt(data);
-        if (iReturn == 0){
-            swal("Success", "Message sent successfully", "success");
-            $("#contactForm").trigger("reset");
-        } else {
-            swal("Failure", "Failed to send message, check your input an try again", "error")
-        }
-    })
-})
