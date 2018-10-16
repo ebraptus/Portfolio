@@ -14,6 +14,19 @@
 
 		<!-- Title -->
 		<title>{{ title }} - John de Shano</title>
+		
+		<!-- Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-77147759-2"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-77147759-2');
+		</script>
+
+		
+		<!-- Style Sheets -->
 		<link rel="stylesheet" type="text/css" href="{% static 'webpage/css/grid.css' %}">
 		<link rel="stylesheet" type="text/css" href="{% static 'webpage/css/master.css' %}">
 		<link rel="stylesheet" type="text/css" href="{% static 'webpage/css/portfolio.css' %}">
