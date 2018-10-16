@@ -1,21 +1,5 @@
-function updateHeader() {
-    var margin = document.getElementById("header").scrollHeight;
-
-    if (window.pageYOffset >= margin) {
-        $("body").addClass("sticky");
-    } else {
-        $("body").removeClass("sticky");
-    }
-}
-updateHeader();
-
-$(window).scroll(function () {
-    updateHeader();
-});
-
 $("#mobileNavToggle").click(function (event) {
     event.preventDefault();
-
     $("body").toggleClass("showMobileNav");
 });
 

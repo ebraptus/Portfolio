@@ -28,8 +28,8 @@
     color: white;
     background-image: url("../src/banner.jpg");
     background-repeat: no-repeat;
-    background-size: 1920px 1080px;
-    background-position-y: -300px;
+    background-size: cover;
+    background-position: center;
     .info {
         transform: translateY(50%);
         img{
@@ -56,19 +56,6 @@
 }
 
 @highlight-color: #0288D1;
-body.sticky{
-    content{
-        
-    }
-
-    nav.desktop{
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-    }
-}
-
 nav {
     background-color: darken(#263238, 5);
     &.mobile {
@@ -145,13 +132,6 @@ body.showMobileNav{
 
     nav{
         left: 0 !important;
-    }
-}
-
-
-body.sticky{
-    #content{
-        margin-top: 60px;
     }
 }
 

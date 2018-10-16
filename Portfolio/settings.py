@@ -27,7 +27,7 @@ DEBUG = False
 ALLOWED_HOSTS = ["www.johndeshano.me", "johndeshano.me"]
 
 if (DEBUG):
-    ALLOWED_HOSTS += "localhost"
+    ALLOWED_HOSTS.append("localhost")
 
 # Application definition
 

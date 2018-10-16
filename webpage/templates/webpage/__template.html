@@ -14,12 +14,12 @@
 
 		<!-- Title -->
 		<title>{{ title }} - John de Shano</title>
-		<link rel="stylesheet" media="all" type="text/css" async href="{% static 'webpage/css/grid.css' %}">
-		<link rel="stylesheet" media="all" type="text/css" async href="{% static 'webpage/css/master.css' %}">
-		<link rel="stylesheet" media="all" type="text/css" async href="{% static 'webpage/css/portfolio.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'webpage/css/grid.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'webpage/css/master.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'webpage/css/portfolio.css' %}">
 
-		<link rel="stylesheet" media="all" type="text/css" async href="https://fonts.googleapis.com/css?family=Lato|Roboto">
-		<link rel="stylesheet" media="all" type="text/css" async href="https://use.fontawesome.com/releases/v5.0.12/css/all.css">
+		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato|Roboto">
+		<link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css">
 
 		{% block stylesheets %} {% endblock %}
 	</head>
@@ -31,9 +31,9 @@
 			{% block body %} {% endblock %}
 		</div>
 
-		<script src="{% static 'webpage/js/jquery-3.3.1.min.js' %}" async defer></script>
-		<script src="{% static 'webpage/js/master.js' %}" async defer></script>
-		<script src="{% static 'webpage/js/portfolio.js' %}" async defer></script>
+		<script defer src="{% static 'webpage/js/jquery-3.3.1.min.js' %}"></script>
+		<script async defer src="{% static 'webpage/js/master.js' %}"></script>
+		<script async defer src="{% static 'webpage/js/portfolio.js' %}"></script>
 		
 		{% block scripts %} {% endblock %}
 	</body>
