@@ -24,6 +24,13 @@ SECRET_KEY = secret.SECRET_KEY
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
+
+import sys
+if 'runserver' in sys.argv:
+    DEBUG = True
+else:
+    DEBUG = False
+
 ALLOWED_HOSTS = ["www.johndeshano.me", "johndeshano.me"]
 
 if (DEBUG):
