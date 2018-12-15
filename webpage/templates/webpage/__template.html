@@ -10,7 +10,7 @@
 		<meta name="expected-hostname" content="johndeshano.me">
 		<meta name="description" content="{% block description %} The portfolio of John de Shano, this page is used to show off all of my talents and the projects I have done in the past and what I plan for the future. {% endblock %}">
 		<meta name="keywords" content="Portfolio,John,de,Shano,DeShano,JohnDeShano,CSS,HTML,JS,JavaScript,PHP,Flask,Python,C++,Game,Developer,Security,Researcher,Debugger,MTA,Wayne,{% block keywords %} {% endblock %}">
-		<meta name="author" content="John de Shano">
+		<meta name="author" content="John DeShano">
 		<meta name="theme-color" content="#0288D1">
 
 		<link rel="manifest" href="{% static 'webpage/manifest.webmanifest' %}">
@@ -28,14 +28,14 @@
 		</script>
 		
 		<!-- Style Sheets -->
-		<link rel="stylesheet" type="text/css" href="{% static 'webpage/css/grid.css' %}">
-		<link rel="stylesheet" type="text/css" href="{% static 'webpage/css/master.css' %}">
-		<link rel="stylesheet" type="text/css" href="{% static 'webpage/css/portfolio.css' %}">
-
-		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato|Roboto">
-		<link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css">
+		<link rel="stylesheet" media="all" type="text/css" href="{% static 'webpage/css/grid.css' %}">
+		<link rel="stylesheet" media="all" type="text/css" href="{% static 'webpage/css/master.css' %}">
+		<link rel="stylesheet" media="all" type="text/css" href="{% static 'webpage/css/portfolio.css' %}">
 
 		{% block stylesheets %} {% endblock %}
+		
+		<link rel="preload" as="style" media="all" type="text/css" href="https://fonts.googleapis.com/css?family=Lato|Roboto">
+		<link rel="stylesheet" media="all" type="text/css" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css">
 	</head>
 	<body>
 		{% include 'webpage/_header.html' %}
@@ -48,6 +48,7 @@
 		<script src="{% static 'webpage/js/jquery-3.3.1.min.js' %}"></script>
 		<script src="{% static 'webpage/js/master.js' %}"></script>
 		<script src="{% static 'webpage/js/portfolio.js' %}"></script>
+		<link rel="stylesheet" media="all" type="text/css" href="https://fonts.googleapis.com/css?family=Lato|Roboto">
 		
 		{% block scripts %} {% endblock %}
 	</body>
