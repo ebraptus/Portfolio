@@ -3,7 +3,6 @@ This is the base configuration for my website and everything that I used to get 
 
 ## General
 ### Languages
-* Languages
 * HTML
 * CSS [LESS PreProcessor]
 * JavaScript
