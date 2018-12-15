@@ -1,0 +1,11 @@
+{
+	"lang": "en-US",
+	"name": "John DeShano Portfolio",
+	"short_name": "John DeShano Portfolio",
+	"dir": "ltr",
+	"start_url": ".",
+	"display": "standalone",
+	"background_color": "#EEEEEE",
+	"description": "The personal portfolio for John DeShano, web designer, software engineer, and all around programmer.",
+	"theme_color": "#0288D1"
+}
