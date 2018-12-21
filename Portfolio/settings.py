@@ -19,8 +19,6 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
-from . import secret
-SECRET_KEY = secret.SECRET_KEY
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -35,6 +33,16 @@ ALLOWED_HOSTS = ["www.johndeshano.me", "johndeshano.me"]
 
 if (DEBUG):
     ALLOWED_HOSTS.append("localhost")
+
+# Set the security key
+# If it is in debug set a security key to use for temporary use
+try:
+    from . import secret
+    SECRET_KEY = secret.SECRET_KEY
+except ImportError:
+    print("[WARNING] Failed to get security key")
+    if DEBUG:
+        SECRET_KEY = "BAD_SECRET"
 
 # Application definition
 
