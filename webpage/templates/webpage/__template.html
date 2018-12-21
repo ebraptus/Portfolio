@@ -1,55 +1,59 @@
 <!DOCTYPE html>
-	<html lang="en">
-	<head>
-		<!-- Meta Data -->
-		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<html lang="en">
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="hostname" content="johndeshano.me">
-		<meta name="expected-hostname" content="johndeshano.me">
-		<meta name="description" content="{% block description %} The portfolio of John de Shano, this page is used to show off all of my talents and the projects I have done in the past and what I plan for the future. {% endblock %}">
-		<meta name="keywords" content="Portfolio,John,de,Shano,DeShano,JohnDeShano,CSS,HTML,JS,JavaScript,PHP,Flask,Python,C++,Game,Developer,Security,Researcher,Debugger,MTA,Wayne,{% block keywords %} {% endblock %}">
-		<meta name="author" content="John DeShano">
-		<meta name="theme-color" content="#0288D1">
+<!DOCTYPE html>
+<html lang="en">
 
-		<link rel="manifest" href="{% static 'webpage/manifest.webmanifest' %}">
-		<!-- Title -->
-		<title>{{ title }} - John de Shano</title>
-		
-		<!-- Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-77147759-2"></script>
-		<script>
-		  window.dataLayer = window.dataLayer || [];
+<head>
+  <!-- Meta Data -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="hostname" content="johndeshano.me">
+  <meta name="expected-hostname" content="johndeshano.me">
+  <meta name="description" content="{% block description %} The portfolio of John de Shano, this page is used to show off all of my talents and the projects I have done in the past and what I plan for the future. {% endblock %}">
+  <meta name="keywords" content="Portfolio,John,de,Shano,DeShano,JohnDeShano,CSS,HTML,JS,JavaScript,PHP,Flask,Python,C++,Game,Developer,Security,Researcher,Debugger,MTA,Wayne,{% block keywords %} {% endblock %}">
+  <meta name="author" content="John DeShano">
+  <meta name="theme-color" content="#0288D1">
+
+  <link rel="manifest" href="{% static 'webpage/manifest.webmanifest' %}">
+  <!-- Title -->
+  <title>{{ title }} - John de Shano</title>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-77147759-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
 		  function gtag(){dataLayer.push(arguments);}
 		  gtag('js', new Date());
 
 		  gtag('config', 'UA-77147759-2');
 		</script>
-		
-		<!-- Style Sheets -->
-		<link rel="stylesheet" media="all" type="text/css" href="{% static 'webpage/css/grid.css' %}">
-		<link rel="stylesheet" media="all" type="text/css" href="{% static 'webpage/css/master.css' %}">
-		<link rel="stylesheet" media="all" type="text/css" href="{% static 'webpage/css/portfolio.css' %}">
 
-		{% block stylesheets %} {% endblock %}
-		
-		<link rel="preload" as="style" media="all" type="text/css" href="https://fonts.googleapis.com/css?family=Lato|Roboto">
-		<link rel="stylesheet" media="all" type="text/css" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css">
-	</head>
-	<body>
-		{% include 'webpage/_header.html' %}
+  <!-- Style Sheets -->
+  <link rel="stylesheet" media="all" type="text/css" href="{% static 'webpage/css/grid.css' %}">
+  <link rel="stylesheet" media="all" type="text/css" href="{% static 'webpage/css/master.css' %}">
+  {% block stylesheets %} {% endblock %}
 
-		<div class="container" id="content">
-			<h1>{{ title }}</h1>
-			{% block body %} {% endblock %}
-		</div>
+  <link rel="preload" as="style" media="all" type="text/css" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans|Oswald|Material+Icons">
+</head>
 
-		<script src="{% static 'webpage/js/jquery-3.3.1.min.js' %}"></script>
-		<script src="{% static 'webpage/js/master.js' %}"></script>
-		<script src="{% static 'webpage/js/portfolio.js' %}"></script>
-		<link rel="stylesheet" media="all" type="text/css" href="https://fonts.googleapis.com/css?family=Lato|Roboto">
-		
-		{% block scripts %} {% endblock %}
-	</body>
+<body>
+  {% include 'webpage/_header.html' %}
+
+  <!-- Content Start -->
+  <div id="content" class="container">
+    {% block body %} {% endblock %}
+  </div>
+  <!-- Content End -->
+
+  {% include 'webpage/_footer.html' %}
+
+  <!-- Scripts -->
+  <link rel="stylesheet" media="all" type="text/css" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans|Oswald|Material+Icons">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="{% static 'webpage/js/master.js' %}"></script>
+</body>
+
 </html>

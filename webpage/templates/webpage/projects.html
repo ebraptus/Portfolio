@@ -3,40 +3,40 @@
 {% block description %}All of my projects that I am proud enough to show off{% endblock %}
 
 {% block body %}
-{% with "s-xs-12 s-sm-12 s-md-6 s-lg-4" as blockset %}
+{% with "s4 s-xs-12 s-sm-12 s-md-6 s-lg-4" as blockset %}
 <div class="row">
 	<div class="{{ blockset }}">
 		<a href="/projects/portfolio/" class="card-selectable">
-				<img src="{% static 'webpage/src/projects/portfolio.jpg' %}" alt="Project-Portfolio" width="100%">
-			<div class="title white">Portfolio Website</div>
+			<img src="{% static 'webpage/src/projects/portfolio.jpg' %}" alt="Project-Portfolio" width="100%">
+			<div class="card-image-title white">Portfolio Website</div>
 		</a>
 	</div>
 
 	<div class="{{ blockset }}">
 		<a href="/projects/kamshooter/" class="card-selectable">
 			<img src="{% static 'webpage/src/projects/kam-shooter.jpg' %}" alt="Project-Kam-Shooter" width="100%">
-			<div class="title white">Kam Shooter</div>
+			<div class="card-image-title white">Kam Shooter</div>
 		</a>
 	</div>
 
 	<div class="{{ blockset }}">
 		<a href="/projects/console/" class="card-selectable">
 			<img src="{% static 'webpage/src/projects/console.jpg' %}" alt="Project-Console" width="100%">
-			<div class="title white">Console</div>
+			<div class="card-image-title white">Console</div>
 		</a>
 	</div>
 
 	<div class="{{ blockset }}">
 		<a href="/projects/maze/" class="card-selectable">
 			<img src="{% static 'webpage/src/projects/maze1.png' %}" alt="Project-Dungeon-Maze-Game" width="100%">
-			<div class="title white">Dungeon Maze Game</div>
+			<div class="card-image-title white">Dungeon Maze Game</div>
 		</a>
 	</div>
 
 	<div class="{{ blockset }}">
 		<a href="/projects/mtagsite/" class="card-selectable">
 			<img src="{% static 'webpage/src/projects/mtagsite.png' %}" alt="Project-MTAG-Site-Website" width="100%">
-			<div class="title">MTAG Website</div>
+			<div class="card-image-title">MTAG Website</div>
 		</a>
 	</div>
 

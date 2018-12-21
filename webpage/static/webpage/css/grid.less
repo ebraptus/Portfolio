@@ -1,167 +1,174 @@
+@xs-start: 576px;
+@sm-start: 675px;
+@md-start: 768px;
+@lg-start: 992px;
+@xl-start: 1200px;
+
 html {
-    box-sizing: border-box;
-    overflow: auto;
+  box-sizing: border-box;
+  overflow: auto;
 }
 
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 *,
 *::before,
 *::after {
-    box-sizing: inherit;
-}
-
-.container {
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-.container-fluid {
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-@media screen and (min-width: 576px) {
-    .container {
-        max-width: 540px;
-    }
-}
-
-@media screen and (min-width: 768px) {
-    .container {
-        max-width: 720px;
-    }
-}
-
-@media screen and (min-width: 992px) {
-    .container {
-        max-width: 960px;
-    }
-}
-
-@media screen and (min-width: 1200px) {
-    .container {
-        max-width: 1140px;
-    }
+  box-sizing: inherit;
 }
 
 .row {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
 }
 
 .s-auto {
-    -ms-flex: 0 0 auto;
-    flex: 0 0 auto;
-    width: auto;
-    max-width: none;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  width: auto;
+  max-width: none;
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container-fluid {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media screen and (min-width: @xs-start) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media screen and (min-width: @md-start) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media screen and (min-width: @lg-start) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media screen and (min-width: @xl-start) {
+  .container {
+    max-width: 1140px;
+  }
 }
 
 .gen-col-reg(12);
 .gen-col-reg(@n, @i: 1) when(@i =< @n) {
-    .s-offset-@{i} {
-        margin-left: (@i * 100% / @n);
-    }
-    .s@{i} {
-        -ms-flex: 0 0 (@i * 100% / @n);
-        flex: 0 0 (@i * 100% / @n);
-        max-width: (@i * 100% / @n);
-    }
-    .gen-col-reg(@n, (@i + 1));
+  .s-offset-@{i} {
+    margin-left: (@i * 100% / @n);
+  }
+  .s@{i} {
+    -ms-flex: 0 0 (@i * 100% / @n);
+    flex: 0 0 (@i * 100% / @n);
+    max-width: (@i * 100% / @n);
+  }
+  .gen-col-reg(@n, (@i + 1));
 }
 
-@media screen and (max-width: 576px) {
-    .s-hidden-xs {
-        display: none;
-    }
-    .gen-columns-xs(12);
+@media screen and (max-width: (@md-start - 1px)) {
+  .s-hidden-xs {
+    display: none;
+  }
+  .gen-columns-xs(12);
 
-    .gen-columns-xs(@n, @i: 1) when (@i =< @n) {
-        .s-sm-@{i} {
-            -ms-flex: 0 0 (@i * 100% / @n);
-            flex: 0 0 (@i * 100% / @n);
-            max-width: (@i * 100% / @n);
-        }
-        .gen-columns-xs(@n, (@i + 1));
+  .gen-columns-xs(@n, @i: 1) when (@i =< @n) {
+    .s-xs-@{i} {
+      -ms-flex: 0 0 (@i * 100% / @n);
+      flex: 0 0 (@i * 100% / @n);
+      max-width: (@i * 100% / @n);
     }
+    .gen-columns-xs(@n, (@i + 1));
+  }
 }
 
-@media screen and (min-width: 576) {
-    .s-hidden-sm {
-        display: none;
-    }
-    .gen-columns-sm(12);
+@media screen and (min-width: @sm-start) and (max-width: (@md-start - 1)) {
+  .s-hidden-sm {
+    display: none !important;
+  }
 
-    .gen-columns-sm(@n, @i: 1) when (@i =< @n) {
-        .s-sm-@{i} {
-            -ms-flex: 0 0 (@i * 100% / @n);
-            flex: 0 0 (@i * 100% / @n);
-            max-width: (@i * 100% / @n);
-        }
-        .gen-columns-sm(@n, (@i + 1));
+  .gen-columns-sm(12);
+
+  .gen-columns-sm(@n, @i: 1) when (@i =< @n) {
+    .s-sm-@{i} {
+      -ms-flex: 0 0 (@i * 100% / @n);
+      flex: 0 0 (@i * 100% / @n);
+      max-width: (@i * 100% / @n);
     }
+    .gen-columns-sm(@n, (@i + 1));
+  }
 }
 
-@media screen and (min-width: 768px) {
-    .s-hidden-md {
-        display: none;
-    }
-    .gen-columns-md(12);
+@media screen and (min-width: @md-start) and (max-width: (@lg-start - 1)) {
+  .s-hidden-md {
+    display: none !important;
+  }
 
-    .gen-columns-md(@n, @i: 1) when (@i =< @n) {
-        .s-md-@{i} {
-            -ms-flex: 0 0 (@i * 100% / @n);
-            flex: 0 0 (@i * 100% / @n);
-            max-width: (@i * 100% / @n);
-        }
-        .gen-columns-md(@n, (@i + 1));
+  .gen-columns-md(12);
+
+  .gen-columns-md(@n, @i: 1) when (@i =< @n) {
+    .s-md-@{i} {
+      -ms-flex: 0 0 (@i * 100% / @n);
+      flex: 0 0 (@i * 100% / @n);
+      max-width: (@i * 100% / @n);
     }
+    .gen-columns-md(@n, (@i + 1));
+  }
 }
 
-@media screen and (min-width: 992px) {
-    .s-hidden-lg {
-        display: none;
-    }
-    .gen-columns-lg(12);
+@media screen and (min-width: @lg-start) and (max-width: (@xl-start - 1)) {
+  .s-hidden-lg {
+    display: none !important;
+  }
+  .gen-columns-lg(12);
 
-    .gen-columns-lg(@n, @i: 1) when (@i =< @n) {
-        .s-lg-@{i} {
-            -ms-flex: 0 0 (@i * 100% / @n);
-            flex: 0 0 (@i * 100% / @n);
-            max-width: (@i * 100% / @n);
-        }
-        .gen-columns-lg(@n, (@i + 1));
+  .gen-columns-lg(@n, @i: 1) when (@i =< @n) {
+    .s-lg-@{i} {
+      -ms-flex: 0 0 (@i * 100% / @n);
+      flex: 0 0 (@i * 100% / @n);
+      max-width: (@i * 100% / @n);
     }
+    .gen-columns-lg(@n, (@i + 1));
+  }
 }
 
-@media screen and (min-width: 1200px) {
-    .s-hidden-xl {
-        display: none;
-    }
-    .gen-columns-xl(12);
+@media screen and (min-width: @xl-start) {
+  .s-hidden-xl {
+    display: none !important;
+  }
+  .gen-columns-xl(12);
 
-    .gen-columns-xl(@n, @i: 1) when (@i =< @n) {
-        .s-lg-@{i} {
-            -ms-flex: 0 0 (@i * 100% / @n);
-            flex: 0 0 (@i * 100% / @n);
-            max-width: (@i * 100% / @n);
-        }
-        .gen-columns-xl(@n, (@i + 1));
+  .gen-columns-xl(@n, @i: 1) when (@i =< @n) {
+    .s-xl-@{i} {
+      -ms-flex: 0 0 (@i * 100% / @n);
+      flex: 0 0 (@i * 100% / @n);
+      max-width: (@i * 100% / @n);
     }
+    .gen-columns-xl(@n, (@i + 1));
+  }
 }
-
 
 .s-xs-1,
 .s-xs-2,
@@ -235,11 +242,11 @@ body {
 .s10,
 .s11,
 .s12 {
-    position: relative;
-    width: 100%;
-    min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-top: 15px;
-    margin-bottom: 15px;
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }

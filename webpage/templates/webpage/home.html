@@ -1,30 +1,29 @@
 {% extends 'webpage/__template.html' %}
 
 {% block body %}
-<h3>About me</h3>
+<!--  About Me Start  -->
 <div class="row">
     <div class="s12">
         <div class="card">
-            <div class="title">About Me</div>
-            <div class="content">
-                <p>
-                    My name is John de Shano, I am a 17 year old software engineer, web developer, and security
-                    researcher from Westland, Michigan.
-                </p>
-                <p>
-                    I am currently a senior in high school at Wayne Memorial. I have been programming since I was
-                    8, starting on a family computer with batch programs that asked simple questions, later I started
-                    learning
-                    HTML, CSS, and Javascript. I began learning C++ in December of 2016 as my first time actually
-                    learning
-                    a full object based programming language. Later, using it to learn about reverse engineering
-                    programs
-                    and see the assembly and how it relates to the machine itself.
-                </p>
+            <div class="card-content">
+                <div class="row">
+                    <div class="s4">
+                        <img class="left" src="https://instagram.fdet1-1.fna.fbcdn.net/vp/9c957fd056a8c82a4f3744c1ee824b1c/5C6E2173/t51.2885-15/e35/22220645_175187159724864_1541482810714357760_n.jpg"
+                            width="100%" alt="John-De-Shano">
+                    </div>
+
+                    <div class="s8">
+                        <h1>I'm John DeShano</h1>
+                        <p>A 17 year old programmer from Westland, Michigan</p>
+                        <p>I have been programming since I was 8 years old, starting with batch files and now I make websites, software, and study assembly.</p>
+                        <p>I am learning over 8 programming languages including C++, Python, C#, HTML, CSS, JavaScript, PHP, MySQL, and many more.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
+<!--  About Me End  -->
 
 <h3>My Accomplishments</h3>
 
@@ -32,8 +31,8 @@
     {% with "s-xs-12 s-sm-12 s-md-6" as blockset %}
     <div class="{{ blockset }}">
         <div class="card">
-            <div class="title">Your8BitGame</div>
-            <div class="content">
+            <div class="card-title">Your8BitGame</div>
+            <div class="card-content">
                 <p>
                     This is a company me and 5 friends from my senior year high school class with the help out our
                     teacher. This was a company where we take old bit games and remake them in game maker studio 2, and
@@ -45,6 +44,4 @@
     </div>
     {% endwith %}
 </div>
-
-
 {% endblock %}
