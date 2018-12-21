@@ -165,13 +165,13 @@ h6 {
 .input-field textarea.float,
 .input-field input:focus,
 .input-field textarea:focus {
-  border-bottom: solid 2px #0288d1;
+  border-bottom: solid 2px #67daff;
 }
 .input-field input.float + label,
 .input-field textarea.float + label,
 .input-field input:focus + label,
 .input-field textarea:focus + label {
-  color: #0288d1;
+  color: #67daff;
   bottom: 55px;
   font-size: 14px;
 }
@@ -192,8 +192,8 @@ h6 {
 }
 .btn {
   padding: 8px 15px;
-  background-color: #0288d1;
-  border: solid 1px #0298ea;
+  background-color: #67daff;
+  border: solid 1px #81e0ff;
   color: white !important;
   font-size: 18px;
   border-radius: 2px;
@@ -240,7 +240,7 @@ h6 {
 .progress .bar[data-percent] {
   width: 100%;
   display: block;
-  background-color: #0288d1;
+  background-color: #67daff;
   text-align: center;
   color: white;
   height: 15px;
