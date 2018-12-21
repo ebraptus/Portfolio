@@ -21,9 +21,10 @@ body > *:last-child {
 }
 a {
   text-decoration: none;
+  color: #03a9f4;
 }
 a:visited {
-  color: blue;
+  color: #67daff;
 }
 h1,
 h2,
