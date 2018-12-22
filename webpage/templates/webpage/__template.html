@@ -14,19 +14,22 @@
   <meta name="author" content="John DeShano">
   <meta name="theme-color" content="#0288D1">
 
-  <link rel="manifest" href="{% static 'webpage/manifest.webmanifest' %}">
   <!-- Title -->
   <title>{{ title }} - John de Shano</title>
+
+  <link rel="manifest" href="{% static 'webpage/manifest.webmanifest' %}">
+  <link rel="icon" href="{% static 'webpage/src/favicon.png' %}">
 
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-77147759-2"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-		  function gtag(){dataLayer.push(arguments);}
-		  gtag('js', new Date());
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-		  gtag('config', 'UA-77147759-2');
-		</script>
+    gtag('config', 'UA-77147759-2');
+  </script>
+
 
   <!-- Style Sheets -->
   <link rel="stylesheet" media="all" type="text/css" href="{% static 'webpage/css/grid.css' %}">
@@ -41,17 +44,17 @@
 
   <!-- Content Start -->
   <main>
-  <div id="content" class="container">
-    {% block body %} {% endblock %}
-  </div>
-  <!-- Content End -->
+    <div id="content" class="container">
+      {% block body %} {% endblock %}
+    </div>
+    <!-- Content End -->
 
-  {% include 'webpage/_footer.html' %}
+    {% include 'webpage/_footer.html' %}
 
-  <!-- Scripts -->
-  <link rel="stylesheet" media="all" type="text/css" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans|Oswald|Material+Icons">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="{% static 'webpage/js/master.js' %}"></script>
+    <!-- Scripts -->
+    <link rel="stylesheet" media="all" type="text/css" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans|Oswald|Material+Icons">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="{% static 'webpage/js/master.js' %}"></script>
 </body>
 
 </html>
