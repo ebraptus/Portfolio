@@ -5,6 +5,9 @@ import re
 
 from . import models
 
+def page404(request):
+	return render(request, "webpage/404.html", {"title": "404"})
+
 def home(request):
 	return render(request, "webpage/home.html", {'title': "Home"})
 
@@ -39,18 +42,5 @@ def education(request):
 	return render(request, "webpage/education.html", {'title': "Education"})
 
 def contact(request):
-	if request.method == "GET":
-		return render(request, "webpage/contact.html", {'title': "Contact"})
-	elif request.method == "POST":
-		name = request.POST["name"]
-		email = request.POST["email"]
-		message = request.POST["message"]
-
-		if name == "" or email == "" or message == "":
-			return HttpResponse("1")
-
-		newMessage = models.Message(name=name, email=email, message=message)
-		newMessage.save()
-		return HttpResponse("0")
-
+	return render(request, "webpage/contact.html", {'title': "Contact"})
 

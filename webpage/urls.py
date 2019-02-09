@@ -1,6 +1,8 @@
 from django.conf.urls import url, include
 from django.urls import path
 from django.views.generic import TemplateView
+from django.conf.urls import handler404, handler500
+
 
 from . import views
 
@@ -20,3 +22,5 @@ urlpatterns = [
 	path('projects/maze/', views.project_maze),
 	path('projects/mtagsite/', views.project_mtagsite),
 ]
+
+handler404 = views.page404
