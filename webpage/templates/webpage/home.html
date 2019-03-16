@@ -1,5 +1,55 @@
 {% extends 'webpage/__template.html' %}
 
+{% block script %}
+<script type="text/javascript">
+  function updateCarousel(){
+    $(".carousel").each(function(){
+      $(this).data("count", $(this).find(".carousel-image").length);
+
+      curIndex = $(this).data("index");
+      $(this).find(".carousel-image").each(function(index){
+        if(index != curIndex){
+          $(this).addClass("hide");
+        }else{
+          $(this).removeClass("hide");
+        }
+      });
+
+    });
+  }
+
+  function stepCarousel(){
+    $(".carousel").each(function(){
+      $(this).data("index", $(this).data("index") + 1);
+      if($(this).data("index") == $(this).data("count")){
+        $(this).data("index", 0);
+      }
+    });
+  }
+
+  function initCarousel(){
+    $(".carousel").each(function(){
+      if($(this).data("index") == undefined){
+        $(this).data("index", 0);
+      }
+
+      delay = $(this).data("delay");
+      if(delay == undefined){
+        delay = 5000;
+      }
+
+      window.setInterval(function(){
+        stepCarousel();
+        updateCarousel();
+      }, delay);
+    });
+  }
+
+  initCarousel();
+  updateCarousel();
+</script>
+{% endblock %}
+
 {% block body %}
 <!--  About Me Start  -->
 <div class="row">
@@ -8,8 +58,14 @@
             <div class="card-content">
                 <div class="row">
                     <div class="s4">
-                        <img class="left" src="https://instagram.fdet1-1.fna.fbcdn.net/vp/9c957fd056a8c82a4f3744c1ee824b1c/5C6E2173/t51.2885-15/e35/22220645_175187159724864_1541482810714357760_n.jpg"
-                            width="100%" alt="John-De-Shano">
+                        <div class="carousel">
+                          <div class="carousel-image">
+                            <img class="left" src="{% static 'webpage/src/header1.jpg' %}" width="100%" alt="John-De-Shano">
+                          </div>
+                          <div class="carousel-image hide">
+                            <img class="left" src="{% static 'webpage/src/header2.jpg' %}" width="100%" alt="John-De-Shano">
+                          </div>
+                        </div>
                     </div>
 
                     <div class="s8">

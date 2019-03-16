@@ -1,3 +1,5 @@
+// out: master.css, sourcemap: false, compress: true
+
 @background-primary: #272932;
 @background-secondary: darken(@background-primary, 5);
 
@@ -18,6 +20,14 @@
    color: black;
    font-size: 42px;
    float: right;
+}
+
+.hide{
+  display: none;
+}
+
+.carousel{
+  display: block;
 }
 
 body {
@@ -326,11 +336,11 @@ h6 {
          }
       }
    }
-   
+
    #mobileNavToggle {
       display: inline-block;
    }
-   
+
    body.showMobileNav {
       .nav {
          left: 0;

@@ -19,6 +19,7 @@
 
   <link rel="manifest" href="{% static 'webpage/manifest.webmanifest' %}">
   <link rel="icon" href="{% static 'webpage/src/favicon.png' %}">
+  {% block style %}{% endblock %}
 
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-77147759-2"></script>
@@ -55,6 +56,7 @@
     <link rel="stylesheet" media="all" type="text/css" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans|Oswald|Material+Icons">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="{% static 'webpage/js/master.js' %}"></script>
+    {% block script %}{% endblock %}
 </body>
 
 </html>

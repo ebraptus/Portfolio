@@ -17,6 +17,11 @@ This is the base configuration for my website and everything that I used to get 
 * [jQuery](https://jquery.com/) - JavaScript Library
 * [Font Awesome](https://fontawesome.com/) - For the awesome icons
 
+## Important Info
+All setup here is based on the ubuntu file system
+
+This isn't made to be the most easy to setup, this is all made for me and just showing off what I know how to do
+
 ## Basics
 Website placed in
 ~~~
@@ -47,3 +52,20 @@ To:
 /etc/systemd/system/portfolio.service
 ~~~
 
+## Setup environment
+~~~
+sudo apt-get update
+sudo apt-get upgrade -y
+sudo apt-get install -y git python build-essential uwsgi
+
+git clone https://github.com/ebraptus/Portfolio.git /var/www/Portfolio
+
+pip install virtualenv
+
+virtualenv /var/www/Portfolio/env
+source /var/www/Portfolio/env/Scripts/activate
+
+python -m pip install pip --upgrade
+python -m pip install django
+python -m pip install uwsgi
+~~~
