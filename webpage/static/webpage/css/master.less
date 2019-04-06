@@ -1,7 +1,5 @@
-// out: master.css, sourcemap: false, compress: true
-
-@background-primary: #272932;
-@background-secondary: darken(@background-primary, 5);
+@background-primary: #191919;
+@background-secondary: lighten(@background-primary, 7);
 
 @header-height: 80px;
 @header-background: #ebebeb;
@@ -114,13 +112,12 @@ h6 {
    flex-direction: column;
    background-color: @background-secondary;
    width: 100%;
-   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12),
-      0 3px 1px -2px rgba(0, 0, 0, 0.2);
+   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.5), 0 1px 5px 0 rgba(0, 0, 0, .8), 0 3px 1px -2px rgba(0, 0, 0, 1);
    &:not(.card-selectable) {
       height: 100%;
    }
-   img {
-      transition: all 250ms;
+   img, .image-details, .card-image-title {
+      transition: all 200ms ease-in-out;
       border-radius: 5px;
       display: block;
    }
@@ -131,8 +128,13 @@ h6 {
       overflow: hidden;
       &:hover {
          img {
-            filter: grayscale(100%);
-            transform: scale(1.2);
+            filter: blur(5px) grayscale(50%);
+         }
+         .image-details{
+            opacity: 1;
+         }
+         .card-image-title{
+            text-shadow: 1px 1px @main-color;
          }
       }
    }
@@ -145,6 +147,25 @@ h6 {
       width: 100%;
       user-select: none;
       pointer-events: none;
+   }
+   .image-details{
+      position: absolute;
+      user-select: none;
+      pointer-events: none;
+      width: calc(~"100% - 50px");
+      height: 100%;
+      display: block;
+      top: 75px;
+      left: 25px;
+      opacity: 0;
+      .detail{
+         display: inline-flex;
+         border-radius: 3px;
+         padding: 3px 5px;
+         background-color: #424242;
+         margin-bottom: 5px;
+         box-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+      }
    }
    .card-title {
       font-family: "Oswald", sans-serif;
