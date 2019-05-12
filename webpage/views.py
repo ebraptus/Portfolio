@@ -5,7 +5,7 @@ import re
 
 from . import models
 
-def page404(request):
+def page404(request, exception):
 	return render(request, "webpage/404.html", {"title": "404"})
 
 def home(request):
