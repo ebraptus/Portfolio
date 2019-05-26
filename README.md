@@ -1,71 +1,32 @@
 # John DeShano Portfolio
-This is the base configuration for my website and everything that I used to get it up and running
+This is the GitHub Repo for my website [www.johndeshano.me](https://www.johndeshano.me/)
 
-## General
+## General Information
+
 ### Languages
-* HTML
-* CSS [LESS PreProcessor]
+
+* HTML [PUG]
+* CSS [LESS]
 * JavaScript
-* Python
+* NodeJS
+* Python [Older Version]
 
-### Build With
-* [NGINX](https://www.nginx.com/) - Used for serving the web pages
-* [Django](https://www.djangoproject.com/) - The Web Framework
-* [Jinja2](http://jinja.pocoo.org/) - Page templating
-* [uWSGI](https://uwsgi-docs.readthedocs.io/) - For deployment of the web server
-* [Google Fonts](https://fonts.google.com/) - For font management
-* [jQuery](https://jquery.com/) - JavaScript Library
-* [Font Awesome](https://fontawesome.com/) - For the awesome icons
+### Built With
 
-## Important Info
-All setup here is based on the ubuntu file system
+* [NGINX](https://www.nginx.com/) - For web routing
+* [NodeJS](https://nodejs.org/) - Current web framework for backend
+* [Google Fonts](https://fonts.google.com/) - For fonts
+* [jQuery](https://jquery.com/) - A JavaScript framework used to make my life easier
+* [Font Awesome](https://fontawesome.com/) - For the *awesome* icons used on the webpage4
+* [Express](https://expressjs.com/) - A NodeJS framework made to make my life a little better
+* [PugJS](https://pugjs.org/) - A HTML PreProcessor that I used to make my code a little cleaner and more readable
+* [LESS](http://lesscss.org/) - A CSS PreProcessor to make CSS code easier to write and cleaner to look at
 
-This isn't made to be the most easy to setup, this is all made for me and just showing off what I know how to do
+### Previously Used
 
-## Basics
-Website placed in
-~~~
-/var/www/Portfolio
-~~~
+This is the old tools that used to be used on the website, but for one reason or another are no longer being used
 
-## NGINX Configuration
-
-Create a symbolic from:
-~~~
-/var/www/Portfolio/extra/portfolio
-~~~
-
-To:
-~~~
-/etc/nginx/sites-enabled/portfolio
-~~~
-
-## Systemd configuration file
-
-Create a symbolic from:
-~~~
-/var/www/Portfolio/extra/portfolio.service
-~~~
-
-To:
-~~~
-/etc/systemd/system/portfolio.service
-~~~
-
-## Setup environment
-~~~
-sudo apt-get update
-sudo apt-get upgrade -y
-sudo apt-get install -y git python build-essential uwsgi
-
-git clone https://github.com/ebraptus/Portfolio.git /var/www/Portfolio
-
-pip install virtualenv
-
-virtualenv /var/www/Portfolio/env
-source /var/www/Portfolio/env/Scripts/activate
-
-python -m pip install pip --upgrade
-python -m pip install django
-python -m pip install uwsgi
-~~~
+* [Flask](http://flask.pocoo.org/) - Old web framework, Changed to Django
+* [Django](https://www.djangoproject.com/) - Old web framework, Change to NodeJS
+* [Jinja2](http://jinja.pocoo.org/) - Used when website was made with Django and Flask
+* [uWSGI](https://uwsgi-docs.readthedocs.io/) - Used for serving the production website when website was made with Django and Flask

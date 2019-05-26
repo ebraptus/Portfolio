@@ -1,0 +1,50 @@
+extends __template
+
+block css
+
+block js
+    script(src="/js/home.js")
+
+block body
+    .row
+        .s12
+            .card
+                .card-content
+                    .row
+                        .s4.s-sm-12.s-xs-12
+                            .carousel
+                                .carousel-image
+                                    img(class="left" src="/src/header1.jpg" width="100%" alt="John-De-Shano")
+                                .carousel-image.hide
+                                    img(class="left" src="/src/header2.jpg" width="100%" alt="John-De-Shano")
+                        .s8.s-sm-12.s-xs-12
+                            <h1>I'm John DeShano</h1>
+                            <p>A 17 year old programmer from Westland, Michigan</p>
+                            <p>I have been programming since I was 8 years old, starting with batch files and now I make websites, software, and study assembly.</p>
+                            <p>I am learning over 8 programming languages including C++, Python, C#, HTML, CSS, JavaScript, PHP, MySQL, and many more.</p>
+
+    h1 Projects
+        a.right(href="/projects/") More Projects >
+    - var blockstyle = "s4 s-xs-12 s-sm-12 s-md-6 s-lg-4";
+    .row
+        div(class=blockstyle)
+            a.card-selectable(href="/projects/portfolio/")
+                img(src="/src/projects/portfolio.jpg" alt="Project-Portfolio" width="100%")
+                .card-image-title.white Portfolio
+                .image-details
+                    .detail HTML5(PUG)
+                    .detail CSS(LESS)
+                    .detail JavaScript
+                    .detail NodeJS
+                    .detail Flask
+                    .detail Django
+                    .detail Jinja2
+
+        div(class=blockstyle)
+            a.card-selectable(href="/projects/mtag/")
+                img(src="/src/projects/mtagsite.png" alt="Project-MTAG-Site-Website" width="100%")
+                .card-image-title.white MTAG Website
+                .image-details
+                    .detail HTML5
+                    .detail CSS(LESS)
+                    .detail JavaScript

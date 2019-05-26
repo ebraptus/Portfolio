@@ -1,0 +1,44 @@
+extends ../__template
+
+block css
+
+block js
+
+block body
+    .row
+        .s6.s-xs-12.s-sm-12.s-md-6
+            .card
+                .card-title Image
+                .card-content
+                    img(src="/src/projects/mtagsite.png" alt="Portfolio-Picture-Project-Website" width="100%")
+
+        .s6.s-xs-12.s-sm-12.s-md-6
+            .card
+                .card-title Description
+                .card-content
+                    h3 Languages
+                        ul
+                            li HTML
+                            li CSS [LESS PreProcessor]
+                            li JavaScript
+
+                    h3 Made With
+                        ul
+                            li
+                                a(target="_blank" href="https://fonts.google.com/") Google Fonts
+                                |  - For font management
+                            li
+                                a(target="_blank" href="https://jquery.com/") jQuery
+                                |  - JavaScript Library
+
+                    h3 Description
+                    p  This website was made for my Game Programming & Design vocational tech class. This showcases all the students MTAG games for everyone to view. 
+                    
+                    h3 What I learned from making this website:
+                    ul
+                        li How to make load a bunch of websites and put them in a list for the user
+                        li Starting with creating a grid system
+
+                .card-footer
+                    a.btn.btn-full(href="http://mtag.johndeshano.me/" target="_blank" style="margin-bottom: 10px") Website Link
+                    a.btn.btn-full(href="https://github.com/ebraptus/MTAG-Website" target="_blank") Github Source Code
