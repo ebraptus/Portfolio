@@ -29,7 +29,7 @@ router.get("/contact/", function(req, res){
   res.render("contact", {title: "Contact"})
 })
 
-// Projects
+// * Projects
 router.get("/projects/portfolio/", function(req, res){
   res.render("projects/portfolio", {title: "Portfolio"})
 })
@@ -49,5 +49,10 @@ router.get("/projects/console/", function(req, res){
 router.get("/projects/maze/", function(req, res){
   res.render("projects/maze", {title: "Maze Game"})
 })
+
+// * Catch 404 Errors
+router.use(function(req, res, next) {
+  res.render("404");
+});
 
 module.exports = router;
