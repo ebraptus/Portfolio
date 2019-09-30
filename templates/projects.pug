@@ -5,6 +5,7 @@ block css
 block js
 
 block body
+    h1 Projects
     - var blockstyle = "col-xs-12 col-sm-12 col-md-6 col-lg-4";
     .row
         div(class=blockstyle)
@@ -19,6 +20,18 @@ block body
                     .detail Flask
                     .detail Django
                     .detail Jinja2
+
+        div(class=blockstyle)
+            a.card-selectable(href="/projects/mistem/")
+                img(src="/src/projects/MiSTEM.png" alt="Screen Capture of MiSTEM website" width="100%")
+                .card-image-title.black MiSTEM Website
+                .image-details
+                    .detail WordPress
+                    .detail HTML
+                    .detail CSS
+                    .detail JavaScript
+                    .detail MultiSite
+    
 
         div(class=blockstyle)
             a.card-selectable(href="/projects/mtagsite/")

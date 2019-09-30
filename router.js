@@ -50,6 +50,10 @@ router.get("/projects/maze/", function(req, res){
   res.render("projects/maze", {title: "Maze Game"})
 })
 
+router.get("/projects/mistem/", function(req, res){
+  res.render("projects/mistem", {title: "MiSTEM Website"})
+})
+
 // * Catch 404 Errors
 router.use(function(req, res, next) {
   res.render("404");
