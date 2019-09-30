@@ -10,7 +10,7 @@
   },
   "scripts": {
     "start": "node ./app.js",
-    "dev": "nodemon ./app.js"
+    "test": "nodemon ./app.js"
   },
   "dependencies": {
     "compression": "^1.7.4",

@@ -11,23 +11,23 @@ block body
             .card
                 .card-content
                     .row
-                        .s4.s-sm-12.s-xs-12
+                        .col-xs-12.col-sm-4
                             .carousel
                                 .carousel-image
-                                    img(class="left" src="/src/header1.jpg" width="100%" alt="John-De-Shano")
+                                    img(class="left" src="/src/header1.jpg" width="100%" alt="John-DeShano")
                                 .carousel-image.hide
-                                    img(class="left" src="/src/header2.jpg" width="100%" alt="John-De-Shano")
-                        .s8.s-sm-12.s-xs-12
+                                    img(class="left" src="/src/header2.jpg" width="100%" alt="John-DeShano")
+                        .col-xs-12.col-sm-8
                             <h1>I'm John DeShano</h1>
-                            <p>A 17 year old programmer from Westland, Michigan</p>
+                            <p>I am a full stack web developer, software engineer, CAD Architect, and a constant learner from Westland, Michigan.</p>
                             <p>I have been programming since I was 8 years old, starting with batch files and now I make websites, software, and study assembly.</p>
                             <p>I am learning over 8 programming languages including C++, Python, C#, HTML, CSS, JavaScript, PHP, MySQL, and many more.</p>
 
     h1 Projects
         a.right(href="/projects/") More Projects >
-    - var blockstyle = "s4 s-xs-12 s-sm-12 s-md-6 s-lg-4";
+    
     .row
-        div(class=blockstyle)
+        div(class="col-xs-12 col-sm-12 col-md-6 col-lg-4")
             a.card-selectable(href="/projects/portfolio/")
                 img(src="/src/projects/portfolio.jpg" alt="Project-Portfolio" width="100%")
                 .card-image-title.white Portfolio
@@ -40,7 +40,7 @@ block body
                     .detail Django
                     .detail Jinja2
 
-        div(class=blockstyle)
+        div(class="col-xs-12 col-sm-12 col-md-6 col-lg-4")
             a.card-selectable(href="/projects/mtag/")
                 img(src="/src/projects/mtagsite.png" alt="Project-MTAG-Site-Website" width="100%")
                 .card-image-title.white MTAG Website

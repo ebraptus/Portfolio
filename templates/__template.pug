@@ -6,8 +6,8 @@ html(lang="en")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
         meta(name="hostname" content="johndeshano.me")
         meta(name="expected-hostname" content="johndeshano.me")
-        meta(name="description" content="The portfolio of John de Shano, this page is used to show off all of my talents and the projects I have done in the past and what I plan for the future.")
-        meta(name="keywords" content="Portfolio,John,de,Shano,DeShano,JohnDeShano,CSS,HTML,JS,JavaScript,PHP,Flask,Python,C++,Game,Developer,Security,Researcher,Debugger,MTA,Wayne")
+        meta(name="description" content="The portfolio of John DeShano, this page is used to show off all of my talents and the projects I have done in the past and what I plan for the future.")
+        meta(name="keywords" content="Portfolio,John,DeShano,JohnDeShano,CSS,HTML,JS,JavaScript,PHP,Flask,Python,C++,Game,Developer,Security,Researcher,Debugger,MTA,Wayne")
         meta(name="author" content="John DeShano")
         meta(name="theme-color" content="#0288D1")
         title= "John DeShano - " + title
@@ -15,9 +15,9 @@ html(lang="en")
         link(rel="manifest" href="/manifest.webmanifest")
         link(rel="icon" href="/src/favicon.png")
         block css
-        link(rel="stylesheet" href="/css/grid.css")
+        link(rel="stylesheet" href="/css/flexboxgrid.min.css")
         link(rel="stylesheet" href="/css/master.css")
-        link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Roboto+Condensed|Roboto")
+        link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Roboto+Condensed:400,700|Roboto:400,500,700&display=swap")
         link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css")
 
         script(async src="https://www.googletagmanager.com/gtag/js?id=UA-77147759-2")
@@ -27,13 +27,46 @@ html(lang="en")
             gtag('js', new Date());
             gtag('config', 'UA-77147759-2');
     body
-        include includes/header
+        header
+            .container
+                a.icon(href="/") John DeShano
+
+                .nav
+                    a(href="/") Home
+                    a(href="/projects/") Projects
+                    a(href="/skills/") Skills
+                    a(href="/languages/") Languages
+                    a(href="/toolset/") Toolset
+                    a(href="/education/") Education
+                    a(href="/contact/") Contact
+
+                #mobileNavToggle
+                    i.fas.fa-bars
 
         main
-            #content.container
+            .container
                 block body
 
-        include includes/footer
+        footer
+            .container
+                .row
+                    .col-xs-6
+                        h2.title Contact Information
+                        .list
+                            a(href="mailto:john@johndeshano.me" target="_blank") Email >
+                            a(href="https://github.com/ebraptus" rel="noopener" target="_blank") GitHub >
+                    .col-xs-6
+                        h2.title Navigation
+                        .list
+                            a(href="/") Home >
+                            a(href="/projects/") Projects >
+                            a(href="/skills/") Skills >
+                            a(href="/languages/") Languages >
+                            a(href="/toolset/") Toolset >
+                            a(href="/education/") Education >
+                            a(href="/contact/") Contact >
+
+                .copyright Copyright &copy; 2018 John DeShano, All Rights Reserved
 
         script(src="/js/jquery-3.4.1.min.js")
         script(src="/js/master.js")

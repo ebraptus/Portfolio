@@ -5,7 +5,51 @@ block css
 block js
 
 block body
-    -var blockstyle = "s4 s-xs-12 s-sm-12 s-md-6";
+    h1 Education
+
+    -var blockstyle = "col-xs-12 col-sm-12 col-md-6";
+    h2 School
+    .row
+        div(class=blockstyle)
+            .card
+                .card-title College - Eastern Michigan University
+                .card-content
+                    div
+                        strong Duration:
+                        |  Fall 2019 - Current
+
+                    div
+                        strong Major:
+                        |  Computer Science Applied
+
+        div(class=blockstyle)
+            .card
+                .card-title High School - Game Design & Programming 1
+                .card-content
+                    div
+                        strong School:
+                        |  Wayne Memorial High School Vocational Tech
+                    div
+                        strong Year:
+                        |  2017 - 2018
+                    div
+                        strong Languages:
+                        |  JavaScript, GameMaker Language, Python, HTML, CSS
+
+        div(class=blockstyle)
+            .card
+                .card-title High School - Game Design & Programming 2
+                .card-content
+                    div
+                        strong School:
+                        |  William D. Ford Vocational Tech Center
+                    div
+                        strong Year:
+                        |  2018 - 2019
+                    div
+                        strong Languages:
+                        |  GameMaker Language, JavaScript, Python, C, C#, HTML, CSS
+
     h2 Certifications
     .row
         div(class=blockstyle)
@@ -75,59 +119,42 @@ block body
                         | Skills: Application Lifecycle Management, HTML5 Build User Interface, HTML5 Technology, JavaScript, User Interface CSS Formatting
                 .card-footer
                     a.btn.btn-full(href='https://www.youracclaim.com/badges/a62d0427-87ab-462b-8b1c-b0b64ed0e820/public_url', target='_blank') More Info
-    h2 Schooling
-    .row
-        div(class=blockstyle)
-            .card
-                .card-title Game Design & Programming 1
-                .card-content
-                    div
-                        strong School:
-                        |  Wayne Memorial High School Vocational Tech
-                    div
-                        strong Year:
-                        |  2017 - 2018
-                    div
-                        strong Languages:
-                        |  JavaScript, GameMaker Language, Python, HTML, CSS
-                    p
-                        | This is a course I took in high school in the 11th grade, this is a class that teaches not only Javascript programming
-                        | as well as game programming in Game Make Studio 2, This class also taught me a lot of good resources like Agile
-                        | software development and how to work better as a team. This class was a good learning experience as I knew a lot of
-                        | programming already but not a lot of class for say was programming. A lot of it also taught me what to do in a software
-                        | development environment.
-        div(class=blockstyle)
-            .card
-                .card-title Game Design & Programming 2
-                .card-content
-                    div
-                        strong School:
-                        |  Wayne Memorial High School Vocational Tech
-                    div
-                        strong Year:
-                        |  2018 - 2019
-                    div
-                        strong Languages:
-                        |  GameMaker Language, JavaScript, Python
-                    p
-                        | This is a course I took in high school in the 12th grade, this class taught me so much and really was a huge stepping
-                        | stone, not into programming but getting into a programming job and learning how to work as a team. I had done so much
-                        | programming in the past that I didn't really have anything to learn in class about that. But I did learn to help others
-                        | learn how to start programming and that's what I tried to do. I spent a lot of time teaching better code practices to
-                        | fellow classmates and friends. This is the year that I and 5 other friends started Your8BitGame.com and we had our
-                        | teacher as a major help in this and gave us the idea and helped us get started. This was an amazing tribute to our
-                        | teamwork and helped us get into agile based programming.
+ 
     h2 Internships
     .row
         div(class=blockstyle)
             .card
+                .card-title Wayne RESA
+                .card-content
+                    div
+                        strong Duration: 
+                        |  June 2019 - Current
+
+                    div
+                        strong What I learned:
+                        ul
+                            li C# - ASP.net
+                            li Jira/Confluence
+                            li Working as a LAN/AV technician and helping people with their computer problems and networking and AV problems
+                            li Web development
+                            li Content Management Systems (WordPress, FoxBright, FinalSite Composer)
+
+        div(class=blockstyle)
+            .card
                 .card-title General Electic
                 .card-content
-                    p
-                        | I had an 2 day internship at GE with a few people from my Principals of Computing class, in this internship we learned
-                        | a lot about how GE works and how they do software development. Later into the internship, we spent time with Arduino
-                        | learning to program them and later we had a group. In our groups, we split our resources and made an idea as one way we
-                        | could "Help the environment" with our ideas and develop and deploy it. Our group did energy conservation with an
-                        | Arduino that auto detected the light value outside and changed the lighting indoors to match a good light value to save
-                        | on resources. In the process we used agile software development methods to do this and it helped me wrap my head around
-                        | Agile and working as a team.
+                    div
+                        strong Duration: 
+                        |  2 Days
+                    
+                    div
+                        strong What I learned:
+                        ul
+                            li Agile
+                            li Working with a team
+                            li Arduino C programming
+
+                    div
+                        strong Overview:
+                        br
+                        span This was a 2 day internship with general electric where we had a small competition where we made Arudino based devices to learn C and make a device to help save energy. Our team made an arduino that could sense the light outside and turn down the lights indoors as it was brigher outside.
