@@ -5,25 +5,23 @@ block css
 block js
 
 block body
-    h1 Projects
-    - var blockstyle = "col-xs-12 col-sm-12 col-md-6 col-lg-4";
+    - var blockstyle = "col-xs-12 col-sm-6 col-md-6 col-lg-4";
+    h1.pagetitle Projects
+    h2 Websites
     .row
         div(class=blockstyle)
-            a.card-selectable(href="/projects/portfolio/")
-                img(src="/src/projects/portfolio.jpg" alt="Project-Portfolio" width="100%")
-                .card-image-title.white Portfolio
+            a.card-selectable(href="/projects/resanet/")
+                img(src="/src/projects/wresa.png" alt="Screen Capture of Wayne RESA Website")
+                .card-image-title.black Wayne RESA Website
                 .image-details
-                    .detail HTML5(PUG)
-                    .detail CSS(LESS)
-                    .detail JavaScript
-                    .detail NodeJS
-                    .detail Flask
-                    .detail Django
-                    .detail Jinja2
+                    .detail Foxbright CMS
+                    .detail Finalsite CMS
+                    .detail HTML
+                    .detail CSS
 
         div(class=blockstyle)
             a.card-selectable(href="/projects/mistem/")
-                img(src="/src/projects/MiSTEM.png" alt="Screen Capture of MiSTEM website" width="100%")
+                img(src="/src/projects/MiSTEM.png" alt="Screen Capture of MiSTEM website")
                 .card-image-title.black MiSTEM Website
                 .image-details
                     .detail WordPress
@@ -31,39 +29,23 @@ block body
                     .detail CSS
                     .detail JavaScript
                     .detail MultiSite
-    
 
         div(class=blockstyle)
             a.card-selectable(href="/projects/mtagsite/")
-                img(src="/src/projects/mtagsite.png" alt="Project-MTAG-Site-Website" width="100%")
+                img(src="/src/projects/mtagsite.png" alt="MTAG website screen capture")
                 .card-image-title.white MTAG Website
                 .image-details
                     .detail HTML5
                     .detail CSS(LESS)
                     .detail JavaScript
 
+    h2 Games
+    .row
         div(class=blockstyle)
             a.card-selectable(href="/projects/kamshooter/")
-                img(src="/src/projects/kam-shooter.jpg" alt="Project-Kam-Shooter" width="100%")
+                img(src="/src/projects/kam-shooter.jpg" alt="Kam shooter game screen capture")
                 .card-image-title.white Kam Shooter
                 .image-details
                     .detail TouchDevelop
                     .detail JavaScipt
                     .detail.danger Website Depricated
-
-        div(class=blockstyle)
-            a.card-selectable(href="/projects/console/")
-                img(src="/src/projects/console.jpg" alt="Project-Console" width="100%")
-                .card-image-title.white Console
-                .image-details
-                    .detail C++
-                    .detail Visual Studio
-                    .detail Windows Application
-
-        div(class=blockstyle)
-            a.card-selectable(href="/projects/maze/")
-                img(src="/src/projects/maze1.png" alt="Project-Dungeon-Maze-Game" width="100%")
-                .card-image-title.white Dungeon Maze Game
-                .image-details
-                    .detail Game Make Studio
-                    .detail JavaScript

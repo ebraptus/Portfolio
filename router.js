@@ -1,6 +1,10 @@
 var express = require("express");
 var router = express.Router();
 
+router.get("/404/", function(req, res) {
+  res.render("404", {title: "404 Page Not Found"});
+})
+
 router.get("/", function(req, res) {
   res.render("home", {title: "Home"});
 });
@@ -25,15 +29,7 @@ router.get("/education/", function(req, res){
   res.render("education", {title: "Education"})
 })
 
-router.get("/contact/", function(req, res){
-  res.render("contact", {title: "Contact"})
-})
-
 // * Projects
-router.get("/projects/portfolio/", function(req, res){
-  res.render("projects/portfolio", {title: "Portfolio"})
-})
-
 router.get("/projects/mtagsite/", function(req, res){
   res.render("projects/mtagsite", {title: "MTAG Website"})
 })
@@ -42,21 +38,17 @@ router.get("/projects/kamshooter/", function(req, res){
   res.render("projects/kamshooter", {title: "Kam Shooter"})
 })
 
-router.get("/projects/console/", function(req, res){
-  res.render("projects/console", {title: "Console"})
-})
-
-router.get("/projects/maze/", function(req, res){
-  res.render("projects/maze", {title: "Maze Game"})
-})
-
 router.get("/projects/mistem/", function(req, res){
   res.render("projects/mistem", {title: "MiSTEM Website"})
 })
 
+router.get("/projects/resanet/", function(req, res){
+  res.render("projects/resanet", {title: "Wayne RESA Website"})
+})
+
 // * Catch 404 Errors
 router.use(function(req, res, next) {
-  res.render("404");
+  res.redirect("/404/");
 });
 
 module.exports = router;
