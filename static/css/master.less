@@ -26,7 +26,7 @@ body {
       margin-bottom: 0 !important;
    }
 
-   *, *::before, *::after{
+   *, *:before, *:after{
       box-sizing: border-box;
    }
 }
@@ -40,9 +40,15 @@ ul{
 
 a {
    text-decoration: none;
-   color: #03a9f4;
+   color: lighten(@primary, 25);
    &:visited {
-      color: #67daff;
+      color: lighten(@primary, 25);
+   }
+   &.dark{
+      color: black;
+      &:visited{
+         color: #212121;
+      }
    }
 }
 
