@@ -29,7 +29,7 @@ app.use(compression());
 
 //* Enforce SSL
 if(env == "production")
-  app.use(enforce.HTTPS({ trustProtoHeader: true })) 
+  app.use(enforce.HTTPS({ trustProtoHeader: true }));
 
 //* Serve Static Content
 app.use(lessMiddleware(__dirname + "/static"));
