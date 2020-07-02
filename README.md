@@ -15,9 +15,9 @@ This is the GitHub Repo for my website [www.johndeshano.me](https://www.johndesh
 
 * [NGINX](https://www.nginx.com/) - For web routing
 * [NodeJS](https://nodejs.org/) - Current web framework for backend
-* [Google Fonts](https://fonts.google.com/) - For fonts
+* [Google Fonts](https://fonts.google.com/) - Fonts!
 * [jQuery](https://jquery.com/) - A JavaScript framework used to make my life easier
-* [Font Awesome](https://fontawesome.com/) - For the *awesome* icons used on the webpage4
+* [Font Awesome](https://fontawesome.com/) - For the *awesome* icons used on the webpage
 * [Express](https://expressjs.com/) - A NodeJS framework made to make my life a little better
 * [PugJS](https://pugjs.org/) - A HTML PreProcessor that I used to make my code a little cleaner and more readable
 * [LESS](http://lesscss.org/) - A CSS PreProcessor to make CSS code easier to write and cleaner to look at
