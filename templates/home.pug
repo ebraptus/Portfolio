@@ -1,103 +1,233 @@
 extends __template
 
 block css
+    link(rel="stylesheet" href="/static/css/page/home.css")
 
 block js
     script(src="/js/home.js")
 
 block body
-    .row
-        .col-xs-12.col-md-9
-            .card 
-                .card-content
-                    .row
-                        .col-xs-12.col-sm-3
-                            .carousel
-                                .carousel-image
-                                    img(class="left" src="/static/src/header1.jpg" width="100%" alt="")
-                                .carousel-image.hide
-                                    img(class="left" src="/static/src/header2.jpg" width="100%" alt="")
+    section#Intro
+        .grid
+            .col-9_xs-12_sm-12_md-8
+                //- About Me Main
+                .card 
+                    .card-content
+                        .grid-noBottom
+                            .col-3_xs-12_sm-12
+                                .carousel
+                                    .carousel-image
+                                        img(class="left" src="/static/src/header1.jpg" width="100%" alt="")
+                                    .carousel-image.hide
+                                        img(class="left" src="/static/src/header2.jpg" width="100%" alt="")
 
-                        .col-xs-12.col-sm-9
-                            <h1>John DeShano</h1>
-                            <h3>Software Developer, Full Stack Web Developer, CAD Architect</h3>
-                            div(style="margin-top: 25px")
-                                a(target="_blank" rel="noopener" title="Github" href="https://github.com/johndeshano/" style="background-color: black; color: white;").socialicon
-                                    i.fab.fa-github
-                                a(target="_blank" rel="noopener" title="Linkedin" href="https://www.linkedin.com/in/johndeshano/" style="background-color: #0077B5; color: white;").socialicon
-                                    i.fab.fa-linkedin-in
-                                a(target="_blank" rel="noopener" title="Codepen" href="https://codepen.io/johndeshano" style="background-color: #212121; color: white;").socialicon
-                                    i.fab.fa-codepen
-            
-            h2(style="margin-top: 15px") Projects
-                a(href="/projects/").right More Projects
-                    span(style="margin-left: 5px").fas.fa-chevron-right
-            .row
-                .col-xs-6
-                    .card
-                        .card-title Wayne RESA Website
-                        .card-image
-                            img(src="/static/src/projects/wresa.png" alt="Wayne RESA Website")
-                        .card-footer
-                            a(href="/projects/resanet/").btn-full More Info
+                            .col-9_xs-12
+                                <h1>John DeShano</h1>
+                                <h3>Software Developer, Full Stack Web Developer, CAD Architect</h3>
+                                div(style="margin-top: 25px")
+                                    a(target="_blank" rel="noopener" title="Github" href="https://github.com/johndeshano/" style="background-color: black; color: white;").socialicon
+                                        i.fab.fa-github
+                                    a(target="_blank" rel="noopener" title="Linkedin" href="https://www.linkedin.com/in/johndeshano/" style="background-color: #0077B5; color: white;").socialicon
+                                        i.fab.fa-linkedin-in
+                                    a(target="_blank" rel="noopener" title="Codepen" href="https://codepen.io/johndeshano" style="background-color: #212121; color: white;").socialicon
+                                        i.fab.fa-codepen
+            .col-3_xs-12_sm-12_md-4
+                //- About me Side
+                .card
+                    .card-content
+                        div
+                            .fas.fa-location-arrow.fa-fw(style="margin-right: 5px")
+                            span Westland, Michigan
+                        div
+                            .fas.fa-university.fa-fw(style="margin-right: 5px")
+                            span Henry Ford College
+                        div
+                            .fas.fa-briefcase.fa-fw(style="margin-right: 5px")
+                            a(target="_blank" rel="noopener" href="https://www.resa.net/") Wayne RESA
+                        div
+                            .far.fa-envelope.fa-fw(style="margin-right: 5px")
+                            a(target="_blank" href="mailto:contact@johndeshano.me") contact@johndeshano.me
 
-                .col-xs-6
-                    .card
-                        .card-title Michigan STEM Network Website
-                        .card-image
-                            img(src="/static/src/projects/MiSTEM.png" alt="Michigan STEM Network Website")
-                        .card-footer
-                            a(href="/projects/mistem/").btn-full More Info
+    //- ========================
+    //- === Projects Section ===
+    //- ========================
+    section#Projects
+        h2(style="margin-top: 15px") Projects
+            a(href="/projects/").right More Projects
+                span(style="margin-left: 5px").fas.fa-chevron-right
+        
+        .grid
+            .col-4_xs-12_sm-6
+                .card
+                    .card-title Wayne RESA Website
+                    .card-image
+                        img(src="/static/src/projects/wresa/wresa.png" alt="Wayne RESA Website")
+                    .card-footer
+                        a(href="/projects/resanet/").btn-full More Info
 
-        //- ===============
-        //- === Sidebar ===
-        //- ===============
-        .col-xs-12.col-md-3
-            .card
-                .card-content
-                    div
-                        .fas.fa-location-arrow.fa-fw(style="margin-right: 5px")
-                        span Westland, Michigan
-                    div
-                        .fas.fa-university.fa-fw(style="margin-right: 5px")
-                        span Henry Ford College
-                    div
-                        .fas.fa-briefcase.fa-fw(style="margin-right: 5px")
-                        a(target="_blank" rel="noopener" href="https://www.resa.net/") Wayne RESA
-                    div
-                        .far.fa-envelope.fa-fw(style="margin-right: 5px")
-                        a(target="_blank" href="mailto:contact@johndeshano.me") contact@johndeshano.me
-            .card
-                .card-title Languages
-                    a.right.dark(href="/languages/" title="Languages Page")
-                        span.fas.fa-chevron-right
-                .card-content
-                    ul
-                        li C++
-                        li C#
-                        li HTML
-                        li CSS
-                        li LESS
-                        li JavaScript
-                        li NodeJS
-                        li Python
-                        li PHP
-                        li MySQL
-                        li LUA
+            .col-4_xs-12_sm-6
+                .card
+                    .card-title Michigan STEM Network Website
+                    .card-image
+                        img(src="/static/src/projects/mistem/MiSTEM.png" alt="Michigan STEM Network Website")
+                    .card-footer
+                        a(href="/projects/mistem/").btn-full More Info
 
-            .card
-                .card-title Skills
-                .card-content
-                    ul
-                        li Full Stack Web Development
-                        li Software Development
-                        li ADA Compliance
-                        li Agile
-                        li LAN/AV Tech Support
-                        li 3D Modeling
-                        li 3D Printing
-                        li SCCM
-                        li Calendly
-                        li Foxbright CMS
-                        li Wordpress CMS
-                        li Finalsite CMS
+            .col-4_xs-12_sm-6
+                .card
+                    .card-title Continuity of Learning Essentials
+                    .card-image
+                        img(src="/static/src/projects/colessentials/main.png" alt="Continuity of Learning Essentials Website")
+                    .card-footer
+                        a(href="/projects/colessentials/").btn-full More Info
+
+
+    section#Skills
+        //- ======================
+        //- === Skills Section ===
+        //- ======================
+        h2(style="margin-top: 15px") Skills
+        .grid
+            //- =================================
+            //- == Web Development Skills Card ==
+            //- =================================
+            .col-4_xs-12_sm-6
+                .card-tall.skills-card
+                    .card-content
+                        section.header
+                            .icon
+                                span.fa-fw.fas.fa-code
+
+                            .title Web Development
+
+                        section
+                            .list-header Languages
+                            ul
+                                li HTML / PUG.js
+                                li CSS / LESS
+                                li JavaScript
+                                li PHP
+                                li C#
+                                li MongoDB / Mongoose
+                                li MySQL
+
+                        section
+                            .list-header Tools
+                            ul
+                                li NodeJS
+                                li Python Flask
+                                li Django
+                                li Git / Github / Bitbucket
+
+
+            //- ======================================
+            //- == Software Development Skills Card ==
+            //- ======================================
+            .col-4_xs-12_sm-6
+                .card-tall.skills-card
+                    .card-content
+                        section.header
+                            .icon
+                                span.fa-fw.fas.fa-laptop-code
+
+                            .title Software Development
+
+                        section
+                            .list-header Languages
+                            ul
+                                li C++
+                                li C#
+                                li Python
+                                li LUA
+
+                        section
+                            .list-header Tools
+                            ul
+                                li VS Code
+                                li Visual Studio 2013-2019
+                                li Windows Terminal / Powershell
+                                li Linux (Ubuntu) Terminal
+                                li Git / Github / Bitbucket
+                                li Confluence Documentation
+
+            //- =====================================
+            //- == Computer Technician Skills Card ==
+            //- =====================================
+            .col-4_xs-12_sm-6
+                .card-tall.skills-card
+                    .card-content
+                        section.header
+                            .icon
+                                span.fa-fw.fas.fa-screwdriver
+
+                            .title Computer Technician
+
+                        section
+                            .list-header Skills
+                            ul
+                                li Windows
+                                li Linux
+                                li Mac
+                                li SCCM
+                                li Laptop Repair
+                                li Desktop Repair
+                                li Jira Service Desk
+                                li Confluence Documentation
+
+                        section
+                            .list-header Tools
+                            ul
+                                li VS Code
+                                li Visual Studio 2013-2019
+                                li Windows Terminal / Powershell
+                                li Linux (Ubuntu) Terminal
+                                li Git / Github
+
+            //- ==========================
+            //- == Engineer Skills Card ==
+            //- ==========================
+            .col-4_xs-12_sm-6
+                .card-tall.skills-card
+                    .card-content
+                        section.header
+                            .icon
+                                span.fa-fw.fas.fa-wrench
+
+                            .title Engineer
+
+                        section
+                            .list-header Skills
+                            ul
+                                li CAD 2D / 3D Modeling
+                                li Arduino
+                                li Rasperry Pi
+
+                        section
+                            .list-header Tools
+                            ul
+                                li Fusion 360
+                                li AutoCAD
+                                li OnShape
+                                li TinkerCAD
+
+
+            //- ========================================
+            //- == Systems Administration Skills Card ==
+            //- ========================================
+            .col-4_xs-12_sm-6
+                .card-tall.skills-card
+                    .card-content
+                        section.header
+                            .icon
+                                span.fa-fw.fas.fa-wrench
+
+                            .title Systems Administration
+
+                        section
+                            .list-header Skills
+                            ul
+                                li SCCM
+                                li Powershell / Windows Terminal
+                                li Linux Terminal
+                                li Jira ServiceDesk
+                                li Confluence Documentation

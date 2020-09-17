@@ -2,22 +2,34 @@
 
 body {
    background-color: @background-primary;
-   font-family: "Roboto", sans-serif;
+   font-family: "Jost", sans-serif;
    color: #eee;
    margin: 0;
    padding: 0;
    line-height: 1.6;
-   & > *:first-child {
-      margin-top: 0 !important;
-   }
-   & > *:last-child {
-      margin-bottom: 0 !important;
-   }
-
-   *, *:before, *:after{
-      box-sizing: border-box;
-   }
 }
+
+
+*, *:before, *:after{
+   box-sizing: border-box;
+}
+
+.mute { color: #777 }
+.black { color: black }
+.white { color: white }
+.red { color: red }
+.blue { color: blue }
+.green { color: green }
+
+.right { float: right }
+.left { float: left }
+.clear { clear: all }
+
+.hide{ display: none; }
+
+.text-left{ text-align: left; }
+.text-right{ text-align: right; }
+.text-center{ text-align: center; }
 
 ul{
    margin-top: 0;
@@ -42,13 +54,14 @@ a {
 
 h1, h2, h3, h4, h5, h6 {
    -webkit-font-smoothing: antialiased;
-   font-family: "Roboto Condensed", sans-serif;
+   font-family: "Jost", sans-serif;
    color: #eee;
    padding: 0;
    margin: 0;
    margin-top: 0;
    font-weight: bold;
    cursor: cursor;
+   font-weight: 500;
    position: relative;
 }
 
@@ -65,43 +78,6 @@ ul{
 p{
    margin: 0;
    margin-bottom: 10px;
-}
-
-.mute { color: #777 }
-.black { color: black }
-.white { color: white }
-.red { color: red }
-.blue { color: blue }
-.green { color: green }
-
-.right { float: right }
-.left { float: left }
-.clear { clear: all }
-
-.hide{ display: none; }
-
-.socialicon{
-   @size: 60px;
-   width: @size;
-   height: @size;
-   line-height: @size;
-   margin: 0 5px;
-   border-radius: 50%;
-   background-color: blue;
-   text-align: center;
-   display: inline-block;
-   font-size: 2em;
-   &:hover, &:active, &:focus, &:visited, &{
-      color: white;
-      text-decoration: none;
-   }
-}
-
-#mobileNavToggle {
-   display: none;
-   color: black;
-   font-size: 36px;
-   float: right;
 }
 
 .pagetitle{
@@ -137,6 +113,9 @@ header {
 
       #mobileNavToggle {
          display: hidden;
+         color: black;
+         font-size: 36px;
+         float: right;
       }
    }
 }
@@ -192,5 +171,27 @@ footer {
 
    .copyright{
       font-size: 1rem;
+   }
+}
+
+.container{
+   width: 100%;
+   margin-left: auto;
+   margin-right: auto;
+
+   @media only screen and (min-width: 36em){
+      width: 576px;
+   }
+
+   @media only screen and (min-width: 48em){
+      width: 768px;
+   }
+
+   @media only screen and (min-width: 64em){
+      width: 1024px;
+   }
+
+   @media only screen and (min-width: 80em){
+      width: 1280px;
    }
 }

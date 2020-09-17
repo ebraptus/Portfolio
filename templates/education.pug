@@ -6,12 +6,24 @@ block js
 
 block body
     h1.pagetitle Education
-    -var blockstyle = "col-xs-12 col-sm-6 col-md-6";
+    -var blockstyle = "col-4_xs-12_sm-6";
     h2 School
-    .row
+    .grid
         div(class=blockstyle)
             .card
-                .card-title College - Eastern Michigan University
+                .card-title Henry Ford College
+                .card-content
+                    div
+                        strong Duration:
+                        |  Summer 2020 - Current
+
+                    div
+                        strong Major:
+                        |  Computer Science
+
+        div(class=blockstyle)
+            .card
+                .card-title Eastern Michigan University
                 .card-content
                     div
                         strong Duration:
@@ -21,36 +33,8 @@ block body
                         strong Major:
                         |  Computer Science Applied
 
-        div(class=blockstyle)
-            .card
-                .card-title High School - Game Design & Programming 1
-                .card-content
-                    div
-                        strong School:
-                        |  Wayne Memorial High School Vocational Tech
-                    div
-                        strong Year:
-                        |  2017 - 2018
-                    div
-                        strong Languages:
-                        |  JavaScript, GameMaker Language, Python, HTML, CSS
-
-        div(class=blockstyle)
-            .card
-                .card-title High School - Game Design & Programming 2
-                .card-content
-                    div
-                        strong School:
-                        |  William D. Ford Vocational Tech Center
-                    div
-                        strong Year:
-                        |  2018 - 2019
-                    div
-                        strong Languages:
-                        |  GameMaker Language, JavaScript, Python, C, C#, HTML, CSS
-
     h2 Certifications
-    .row
+    .grid
         div(class=blockstyle)
             .card
                 .card-title MTA: Windows Operating System Fundamentals
@@ -120,7 +104,7 @@ block body
                     a.btn.btn-full(href="https://www.youracclaim.com/badges/a62d0427-87ab-462b-8b1c-b0b64ed0e820/public_url" target="_blank" rel="noopener noreferrer") More Info
  
     h2 Internships
-    .row
+    .grid
         div(class=blockstyle)
             .card
                 .card-title Wayne RESA

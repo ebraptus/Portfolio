@@ -37,6 +37,10 @@ router.get("/projects/resanet/", function (req, res) {
   res.render("projects/resanet", { title: "Wayne RESA Website" })
 });
 
+router.get("/projects/colessentials/", function (req, res) {
+  res.render("projects/colessentials", { title: "Continuity of Learning Essentials" })
+});
+
 // * Catch 404 Errors
 router.use(function (req, res, next) {
   res.status(404);
