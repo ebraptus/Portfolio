@@ -32,8 +32,8 @@ if(env == "production")
   app.use(enforce.HTTPS({ trustProtoHeader: true }));
 
 //* Serve Static Content
-app.use(lessMiddleware(__dirname + "/static"));
-app.use(express.static(__dirname + "/static"));
+app.use("/static/", lessMiddleware(__dirname + "/static"));
+app.use("/static/", express.static(__dirname + "/static"));
 
 // ==============
 // === Routes ===

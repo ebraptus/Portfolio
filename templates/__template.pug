@@ -1,38 +1,46 @@
 <!DOCTYPE html>
 html(lang="en")
     head
+        //- Metadata
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        meta(http-equiv="X-UA-Compatible" content="ie=edge")
+
         meta(name="hostname" content="johndeshano.me")
         meta(name="expected-hostname" content="johndeshano.me")
-        meta(name="description" content="The portfolio of John DeShano, this page is used to show off all of my talents and the projects I have done in the past and what I plan for the future.")
+        meta(name="description" content="Progammer, Full Stack Web Developer, Software Engineer, LAN Technician, CAD Architect, Engineer")
         meta(name="keywords" content="Portfolio,John,DeShano,JohnDeShano,CSS,HTML,JS,JavaScript,PHP,Flask,Python,C++,Game,Developer,Security,Researcher,Debugger,MTA,Wayne")
         meta(name="author" content="John DeShano")
         meta(name="theme-color" content="#0288D1")
+
+        //- Title
         title= "John DeShano - " + title
 
-        link(rel="manifest" href="/manifest.webmanifest")
-        link(rel="icon" href="/src/favicon.png")
-        block css
-        link(rel="stylesheet" href="/css/flexboxgrid.min.css")
-        link(rel="stylesheet" href="/css/master.css")
+        //- Meta Links
+        link(rel="manifest" href="/static/manifest.webmanifest")
+        link(rel="icon" href="/static/src/favicon.png")
+
+        //- Fonts
         link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Roboto+Condensed:400,700|Roboto:400,500,700&display=swap")
         link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css")
+        
+        //- Style Sheets
+        link(rel="stylesheet" href="/static/css/flexboxgrid.min.css")
+        link(rel="stylesheet" href="/static/css/master.css")
+        link(rel="stylesheet" href="/static/css/features.css")
+        
+        block css
 
+        //- Google Analytics
         script(async src="https://www.googletagmanager.com/gtag/js?id=UA-77147759-2")
-        script.
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'UA-77147759-2');
+        
     body
         header
             .container
                 a.icon(href="/") John DeShano
 
                 .nav
-                    a(href="/") Home
+                    a(href="/home/") Home
                     a(href="/projects/") Projects
                     a(href="/skills/") Skills
                     a(href="/languages/") Languages
@@ -48,8 +56,9 @@ html(lang="en")
 
         footer
             .container
-                .copyright Copyright &copy; 2018 John DeShano, All Rights Reserved
+                .copyright Made by me, Copyright &copy; 2018-2020 John DeShano, All Rights Reserved
 
+        //- Scripts
         script(src="/js/jquery-3.4.1.min.js")
         script(src="/js/master.js")
         block js

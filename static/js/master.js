@@ -1,4 +1,12 @@
-$(".progress .bar[data-percent]").each(function(){
+// Google Analytics
+$(document).ready(function(){
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-77147759-2');
+})
+
+(".progress .bar[data-percent]").each(function(){
   $(this).width($(this).attr("data-percent") + "%");
 })
 
@@ -32,3 +40,4 @@ $('body,html').bind("touchmove", function (e) {
         $("body").removeClass('showMobileNav');
     }
 });
+

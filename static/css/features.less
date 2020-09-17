@@ -1,0 +1,196 @@
+@import "vars.less";
+
+// ==================
+// === Slideshows ===
+// ==================
+.slideshow {
+    display: block;
+    position: relative;
+    height: 100%;
+    width: 100%;
+
+    .slide {
+        &:first-child {
+            position: relative;
+        }
+
+        position: absolute;
+        display: inline-flex;
+        width: 100%;
+        top: 0;
+        left: 0;
+
+        .title {
+            position: absolute;
+            text-align: center;
+            width: 100%;
+            font-size: 24px;
+            bottom: 0;
+            color: black;
+
+            &:before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+        }
+    }
+}
+
+// ===============
+// === Buttons ===
+// ===============
+.btn,
+.btn-full {
+    padding: 8px 15px;
+    font-size: 1.2em;
+    border-radius: 2px;
+
+    &.btn-full {
+        width: 100%;
+        display: inline-block;
+        text-align: center;
+    }
+
+    .fab {
+        padding-right: 8px;
+    }
+
+    &,
+    &:hover,
+    &:visited {
+        background-color: @primary;
+        border: solid 1px lighten(@primary, 5);
+        color: black;
+
+        &.btn-danger {
+            background-color: @danger-color;
+            border: solid 1px lighten(@danger-color, 5);
+        }
+    }
+}
+
+// =============
+// === Cards ===
+// =============
+.card,
+.card-selectable {
+    width: 100%;
+    border-radius: 5px;
+    background-color: @background-secondary;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.5), 0 1px 5px 0 rgba(0, 0, 0, .8), 0 3px 1px -2px rgba(0, 0, 0, 1);
+    margin-bottom: 15px;
+
+    &.card-selectable {
+        overflow: hidden;
+        position: relative;
+        display: flex;
+
+        img,
+        .image-details,
+        .card-image-title {
+            transition: all 200ms linear;
+            border-radius: 5px;
+            display: block;
+            width: 100%;
+        }
+
+        &:hover {
+            img {
+                filter: blur(5px) grayscale(50%);
+            }
+
+            .image-details {
+                opacity: 1;
+            }
+
+            .card-image-title {
+                text-shadow: 1px 1px @primary;
+            }
+        }
+
+        img+.card-image-title {
+            display: block;
+            position: absolute;
+            top: 15px;
+            font-size: 24px;
+            text-align: center;
+            width: calc(100% - 30px);
+            margin-left: 15px;
+            user-select: none;
+            pointer-events: none;
+            background-color: rgba(0, 0, 0, 0.5);
+            box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.5);
+
+            &.black {
+                box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.5);
+                background-color: rgba(255, 255, 255, 0.5);
+            }
+        }
+
+        .image-details {
+            position: absolute;
+            user-select: none;
+            pointer-events: none;
+            width: calc(~"100% - 50px");
+            height: 100%;
+            display: block;
+            top: 75px;
+            left: 25px;
+            opacity: 0;
+
+            .detail {
+                display: inline-flex;
+                border-radius: 3px;
+                padding: 3px 5px;
+                margin-left: 5px;
+                margin-right: 5px;
+                background-color: #424242;
+                margin-bottom: 5px;
+                box-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+
+                &.danger {
+                    color: @danger-color;
+                }
+            }
+        }
+    }
+
+    .card-title {
+        font-family: "Roboto Condensed", sans-serif;
+        font-size: 1.5em;
+        padding: 0 15px;
+        border-radius: 5px 5px 0 0;
+        width: 100%;
+
+        &:first-child {
+            padding: 2px 15px;
+            background-color: @primary;
+            color: black;
+        }
+    }
+
+    .card-image img {
+        width: 100%;
+    }
+
+    .card-content {
+        padding: 15px;
+        width: 100%;
+
+        &>p:first-child {
+            padding: 0;
+            margin: 0;
+        }
+    }
+
+    .card-footer {
+        align-self: flex-end;
+        width: 100%;
+        padding: 10px 15px;
+    }
+}
