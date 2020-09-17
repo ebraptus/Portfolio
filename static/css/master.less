@@ -97,6 +97,14 @@ header {
       font-family: "Lobster", sans-serif;
    }
 
+   #mobileNavToggle {
+      display: none;
+      color: black;
+      font-size: 36px;
+      float: right;
+      cursor: pointer;
+   }
+
    .nav {
       display: inline-flex;
       float: right;
@@ -110,17 +118,10 @@ header {
             background-color: darken(@header-background, 5);
          }
       }
-
-      #mobileNavToggle {
-         display: hidden;
-         color: black;
-         font-size: 36px;
-         float: right;
-      }
    }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 64em) {
    .nav{
       display: flex !important;
       flex-direction: column;
@@ -143,7 +144,7 @@ header {
    }
 
    #mobileNavToggle {
-      display: inline-block;
+      display: inline-block !important;
    }
 
    body.showMobileNav {

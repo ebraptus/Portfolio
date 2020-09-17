@@ -6,10 +6,6 @@ $(document).ready(function(){
     gtag('config', 'UA-77147759-2');
 })
 
-(".progress .bar[data-percent]").each(function(){
-  $(this).width($(this).attr("data-percent") + "%");
-})
-
 $("#mobileNavToggle").click(function (event) {
     event.preventDefault();
     $("body").toggleClass("showMobileNav");
@@ -17,11 +13,11 @@ $("#mobileNavToggle").click(function (event) {
 
 $("nav.mobile").bind('touchmove', function (e) {
     e.preventDefault();
-})
+});
 
 $("#mobileNavToggle").bind('touchmove', function (e) {
     e.preventDefault();
-})
+});
 
 $('body,html').click(function (e) {
     var menu = $("nav.mobile");
