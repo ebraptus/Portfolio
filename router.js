@@ -1,6 +1,16 @@
 var express = require("express");
 var router = express.Router();
 
+router.get("/sitemap.xml", function (req, res){
+  res.type("text/xml");
+  res.sendFile(__dirname + "/static_meta/sitemap.xml")
+});
+
+router.get("/robots.txt", function (req, res){
+  res.type("text/txt");
+  res.sendFile(__dirname + "/static_meta/robots.txt")
+});
+
 router.get(["/", "/home/"], function (req, res) {
   res.render("home", { title: "Home" });
 });
