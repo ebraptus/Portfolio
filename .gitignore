@@ -86,3 +86,8 @@ typings/
 
 # DynamoDB Local files
 .dynamodb/
+
+# CSS Files to Not Add
+static/css/features.css
+static/css/master.css
+static/css/home.css
