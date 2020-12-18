@@ -1,4 +1,6 @@
-// Google Analytics
+//********************
+//* Google Analytics *
+//********************
 $(document).ready(function(){
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -6,6 +8,9 @@ $(document).ready(function(){
     gtag('config', 'UA-77147759-2');
 })
 
+//*********************
+//* Mobile Navigation *
+//*********************
 $("#mobileNavToggle").click(function (event) {
     event.preventDefault();
     $("body").toggleClass("showMobileNav");
@@ -37,3 +42,13 @@ $('body,html').bind("touchmove", function (e) {
     }
 });
 
+//********************
+//* Card Icon Sizing *
+//********************
+$(".card, .card-tall").each(function(){
+    let pCurrentCard = $(this);
+
+    if(pCurrentCard.children(".card-icon").length > 0){
+        pCurrentCard.parent().css("margin-top", "2.5rem");
+    }
+});
