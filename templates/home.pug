@@ -1,8 +1,5 @@
 extends __template
 
-block css
-    link(rel="stylesheet" href="/static/css/page/home.css")
-
 block js
     script(src="/static/js/home.js")
 
@@ -23,21 +20,21 @@ block body
 
                             .col-9_xs-12_sm-12
                                 section
-                                    .title.bold John DeShano
+                                    .bold.text-xl John DeShano
                                     .subtitle.bold Software Developer, Web Developer, Computer Technican
                                 
                                 section(style="margin-top: 10px")
                                     .grid
                                         .col-4_md-6_sm-12
-                                            a(target="_blank" rel="noopener" title="Github" href="https://github.com/johndeshano/").social-icon-pill.github
+                                            a(target="_blank" rel="noopener" href="https://github.com/johndeshano/").social-icon-pill.github
                                                 .icon.fab.fa-fw.fa-github
                                                 .text GitHub
                                         .col-4_md-6_sm-12
-                                            a(target="_blank" rel="noopener" title="Linkedin" href="https://www.linkedin.com/in/johndeshano/").social-icon-pill.linkedin
+                                            a(target="_blank" rel="noopener" href="https://www.linkedin.com/in/johndeshano/").social-icon-pill.linkedin
                                                 .icon.fab.fa-fw.fa-linkedin-in
                                                 .text LinkedIn
                                         .col-4_md-6_sm-12
-                                            a(target="_blank" rel="noopener" title="Codepen" href="https://codepen.io/johndeshano").social-icon-pill.codepen
+                                            a(target="_blank" rel="noopener" href="https://codepen.io/johndeshano").social-icon-pill.codepen
                                                 .icon.fab.fa-fw.fa-codepen
                                                 .text CodePen
             .col-3_xs-12_sm-12_md-4
