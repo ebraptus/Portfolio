@@ -46,6 +46,8 @@
 // ================
 .carousel {
     overflow-x: scroll;
+    padding: 0;
+    margin: 0;
 }
 
 // ===============
@@ -246,4 +248,61 @@
 
 *::-webkit-scrollbar-corner{
     background-color: @primary;
+}
+
+// ====================
+// === Social Icons ===
+// ====================
+
+.social-icon, .social-icon-pill {
+    @height: 60px;
+    height: @height;
+    width: @height;
+    line-height: @height;
+    margin: 0 5px;
+    border-radius: 50%;
+    background-color: blue;
+    text-align: center;
+    display: inline-block;
+    
+    .icon{
+        font-size: 2em;
+    }
+    
+    &.social-icon-pill{
+        width: 100%;
+        border-radius: 5px;
+        margin: 0;
+        .icon{
+            display: inline-block;
+            padding: 0 15px;
+        }
+        .text{
+            display: inline-block;
+            padding: 0 15px;
+            font-size: 1.5em;
+        }
+    }
+
+    &.github{
+        background-color: black;
+        color: white;
+    }
+    &.linkedin{
+        background-color: #0077B5;
+        color: white;
+    }
+    &.codepen{
+        background-color: #212121;
+        color: white;
+    }
+
+    &:hover,
+    &:active,
+    &:focus,
+    &:visited,
+    & {
+        color: white;
+        text-decoration: none;
+    }
 }

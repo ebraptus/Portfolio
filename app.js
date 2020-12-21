@@ -2,9 +2,7 @@ const express = require("express");
 const lessMiddleware = require("less-middleware");
 const compression = require("compression");
 const enforce  = require("express-sslify");
-const chalk = require("chalk");
 const morgan = require("morgan");
-const dotenv = require("dotenv");
 
 const app = express();
 const env = process.env.NODE_ENV || "dev";

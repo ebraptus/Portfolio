@@ -17,20 +17,29 @@ block body
                             .col-3_xs-12_sm-12
                                 .carousel
                                     .carousel-image
-                                        img(class="left" src="/static/src/header1.jpg" width="100%" alt="")
+                                        img(class="left" src="/static/src/header1.jpg" width="100%" alt="" role="presentation")
                                     .carousel-image.hide
-                                        img(class="left" src="/static/src/header2.jpg" width="100%" alt="")
+                                        img(class="left" src="/static/src/header2.jpg" width="100%" alt="" role="presentation")
 
-                            .col-9_xs-12
-                                div.title.bold John DeShano
-                                div.subtitle.bold Software Developer, Web Developer, Computer Technican
-                                div(style="margin-top: 25px")
-                                    a(target="_blank" rel="noopener" title="Github" href="https://github.com/johndeshano/" style="background-color: black; color: white;").socialicon
-                                        i.fab.fa-github
-                                    a(target="_blank" rel="noopener" title="Linkedin" href="https://www.linkedin.com/in/johndeshano/" style="background-color: #0077B5; color: white;").socialicon
-                                        i.fab.fa-linkedin-in
-                                    a(target="_blank" rel="noopener" title="Codepen" href="https://codepen.io/johndeshano" style="background-color: #212121; color: white;").socialicon
-                                        i.fab.fa-codepen
+                            .col-9_xs-12_sm-12
+                                section
+                                    .title.bold John DeShano
+                                    .subtitle.bold Software Developer, Web Developer, Computer Technican
+                                
+                                section(style="margin-top: 10px")
+                                    .grid-noBottom
+                                        .col-4_sm-12
+                                            a(target="_blank" rel="noopener" title="Github" href="https://github.com/johndeshano/").social-icon-pill.github
+                                                .icon.fab.fa-fw.fa-github
+                                                .text Github
+                                        .col-4_sm-12
+                                            a(target="_blank" rel="noopener" title="Linkedin" href="https://www.linkedin.com/in/johndeshano/").social-icon-pill.linkedin
+                                                .icon.fab.fa-fw.fa-linkedin-in
+                                                .text LinkedIn
+                                        .col-4_sm-12
+                                            a(target="_blank" rel="noopener" title="Codepen" href="https://codepen.io/johndeshano").social-icon-pill.codepen
+                                                .icon.fab.fa-fw.fa-codepen
+                                                .text CodePen
             .col-3_xs-12_sm-12_md-4
                 //- About me Side
                 .card
