@@ -19,18 +19,6 @@ router.get("/projects/", function (req, res) {
   res.render("projects", { title: "Projects" })
 });
 
-router.get("/skills/", function (req, res) {
-  res.render("skills", { title: "Skills" })
-});
-
-router.get("/languages/", function (req, res) {
-  res.render("languages", { title: "Languages" })
-});
-
-router.get("/toolset/", function (req, res) {
-  res.render("toolset", { title: "Toolset" })
-});
-
 router.get("/education/", function (req, res) {
   res.render("education", { title: "Education" })
 });
