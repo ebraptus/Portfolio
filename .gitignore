@@ -88,6 +88,5 @@ typings/
 .dynamodb/
 
 # CSS Files to Not Add
-static/css/features.css
-static/css/master.css
-static/css/home.css
+static/css/*.css
+static/css/page/*.css
