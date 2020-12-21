@@ -5,69 +5,83 @@ block css
 block js
 
 block body
-    h1.pagetitle Education
-    -var blockstyle = "col-4_xs-12_sm-6";
-    h2 School
-    .grid
-        div(class=blockstyle)
-            .card
-                .card-title Henry Ford College
-                .card-content
-                    div
-                        strong Duration:
-                        |  Summer 2020 - Current
+    h1.primary.bold Education
+    
+    section#College
+        h2 College
+        .grid
+            .col-4_xs-12_sm-6
+                .card
+                    .card-title Henry Ford College
+                    .card-content
+                        div
+                            strong Duration:
+                            |  Summer 2020 - Current
 
-                    div
-                        strong Major:
-                        |  Computer Science
+                        div
+                            strong Major:
+                            |  Computer Science
 
-        div(class=blockstyle)
-            .card
-                .card-title Eastern Michigan University
-                .card-content
-                    div
-                        strong Duration:
-                        |  Fall 2019 - Winter 2019
+            .col-4_xs-12_sm-6
+                .card
+                    .card-title Eastern Michigan University
+                    .card-content
+                        div
+                            strong Duration:
+                            |  Fall 2019 - Winter 2019
 
-                    div
-                        strong Major:
-                        |  Computer Science Applied
+                        div
+                            strong Major:
+                            |  Computer Science Applied
 
-    h2 Internships
-    .grid
-        div(class=blockstyle)
-            .card
-                .card-title Wayne RESA
-                .card-content
-                    div
-                        strong Duration: 
-                        |  June 2019 - Current
+    section#Interships
+        h2 Internships
+        .grid
+            .col-4_xs-12_sm-6
+                .card
+                    .card-title Wayne RESA
+                    .card-content
+                        section
+                            .bold.primary.text-md General
+                            strong Duration: 
+                            |  June 2019 - Current
 
-                    div
-                        strong What I learned:
-                        ul
-                            li C# - ASP.net
-                            li Jira/Confluence
-                            li Working as a LAN/AV technician and helping people with their computer problems and networking and AV problems
-                            li Web development
-                            li Content Management Systems (WordPress, FoxBright, FinalSite Composer)
+                        section
+                            .bold.primary.text-md Learning Points
+                            ul
+                                li Service Desk - Jira / Confluence
+                                li Computer Repair
+                                li Web Development
+                                ul
+                                    li HTML / Jade
+                                    li CSS / LESS
+                                    li JS
+                                    li C# ASP.net / MVC
+                                li CMS Development
+                                ul
+                                    li WordPress
+                                    li Foxbright
+                                    li Finalsite
+                                li Systems Administration
+                                ul
+                                    li SCCM
+                                    li Print Server Management
+                                    li Active Directory
 
-        div(class=blockstyle)
-            .card
-                .card-title General Electric
-                .card-content
-                    div
-                        strong Duration: 
-                        |  2 Days
-                    
-                    div
-                        strong What I learned:
-                        ul
-                            li Agile
-                            li Working with a team
-                            li Arduino C programming
+            .col-4_xs-12_sm-6
+                .card
+                    .card-title General Electric
+                    .card-content
+                        section
+                            .bold.primary.text-md General
 
-                    div
-                        strong Overview:
-                        br
-                        span This was a 2 day internship with general electric where we had a small competition where we made Arudino based devices to learn C and make a device to help save energy. Our team made an arduino that could sense the light outside and turn down the lights indoors as it was brigher outside.
+                            strong Duration: 
+                            |  2 Days
+                        
+                        section
+                            .bold.primary.text-md Learning Points
+                            ul
+                                li Agile
+                                li Team Development
+                                li Arduino
+                                li C Programming

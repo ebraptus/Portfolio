@@ -1,6 +1,5 @@
-@import "vars.less";
+@import "vars.less"; // ==================
 
-// ==================
 // === Slideshows ===
 // ==================
 .slideshow {
@@ -11,14 +10,14 @@
 
     .slide {
         &:first-child {
-            position: relative;
+            position: relative
         }
 
-        position: absolute;
-        display: inline-flex;
-        width: 100%;
-        top: 0;
-        left: 0;
+        position:absolute;
+        display:inline-flex;
+        width:100%;
+        top:0;
+        left:0;
 
         .title {
             position: absolute;
@@ -35,7 +34,7 @@
                 left: 0;
                 right: 0;
                 bottom: 0;
-                background-color: rgba(0, 0, 0, 0.5);
+                background-color: rgba(0, 0, 0, 0.5)
             }
         }
     }
@@ -47,7 +46,7 @@
 .carousel {
     overflow-x: scroll;
     padding: 0;
-    margin: 0;
+    margin: 0
 }
 
 // ===============
@@ -58,14 +57,15 @@
     padding: 8px 15px;
     font-size: 1.2em;
     border-radius: 2px;
+
     &.btn-full {
         width: 100%;
         display: inline-block;
-        text-align: center;
+        text-align: center
     }
 
     .fab {
-        padding-right: 8px;
+        padding-right: 8px
     }
 
     &,
@@ -73,11 +73,11 @@
         background-color: @primary-dark;
         border: solid 1px lighten(@primary-dark, 5);
         color: white;
-        transition: background-color ease-in-out 100ms;
+        transition: background-color ease-in-out 100ms
     }
 
-    &:hover{
-        background-color: lighten(@primary-dark, 5);
+    &:hover {
+        background-color: lighten(@primary-dark, 5)
     }
 }
 
@@ -91,12 +91,12 @@
     width: 100%;
     border-radius: 5px;
     background-color: @background-secondary;
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.5), 0 1px 5px 0 rgba(0, 0, 0, .8), 0 3px 1px -2px rgba(0, 0, 0, 1);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.5), 0 1px 5px 0 rgba(0, 0, 0, 0.8), 0 3px 1px -2px rgba(0, 0, 0, 1);
     margin-bottom: 15px;
     z-index: 10;
 
-    &.card-tall{
-        height: 100%;
+    &.card-tall {
+        height: 100%
     }
 
     &.card-selectable {
@@ -110,20 +110,20 @@
             transition: all 200ms linear;
             border-radius: 5px;
             display: block;
-            width: 100%;
+            width: 100%
         }
 
         &:hover {
             img {
-                filter: blur(5px) grayscale(50%);
+                filter: blur(5px) grayscale(50%)
             }
 
             .image-details {
-                opacity: 1;
+                opacity: 1
             }
 
             .card-image-title {
-                text-shadow: 1px 1px @primary;
+                text-shadow: 1px 1px @primary
             }
         }
 
@@ -142,7 +142,7 @@
 
             &.black {
                 box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.5);
-                background-color: rgba(255, 255, 255, 0.5);
+                background-color: rgba(255, 255, 255, 0.5)
             }
         }
 
@@ -168,7 +168,7 @@
                 box-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
 
                 &.danger {
-                    color: @danger-color;
+                    color: @danger-color
                 }
             }
         }
@@ -182,34 +182,35 @@
         border-radius: 5px 5px 0 0;
         width: 100%;
         color: white;
-        
+
         &:first-child {
             padding: 2px 15px;
-            background-color: @primary-dark;
+            background-color: @primary-dark
         }
     }
 
     @card-icon-size: 5rem;
     @card-icon-font-size: 2rem;
-    .card-icon{
+
+    .card-icon {
         display: block;
         position: relative;
         left: 50%;
         transform: translateX(-50%) translateY(-50%);
         color: white;
         background-color: @primary-dark;
-        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.5), 0 1px 5px 0 rgba(0, 0, 0, .8), 0 3px 1px -2px rgba(0, 0, 0, 1);
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.5), 0 1px 5px 0 rgba(0, 0, 0, 0.8), 0 3px 1px -2px rgba(0, 0, 0, 1);
         width: @card-icon-size;
         height: @card-icon-size;
         line-height: @card-icon-size;
         border-radius: 50%;
         text-align: center;
         font-size: @card-icon-font-size;
-        margin-bottom: -@card-icon-size / 2;
+        margin-bottom: -@card-icon-size / 2
     }
 
     .card-image img {
-        width: 100%;
+        width: 100%
     }
 
     .card-content {
@@ -218,22 +219,22 @@
 
         &>p:first-child {
             padding: 0;
-            margin: 0;
+            margin: 0
         }
     }
 
     .card-footer {
         align-self: flex-end;
         width: 100%;
-        padding: 10px 15px;
+        padding: 10px 15px
     }
 }
 
 // ===================
 // === Scroll Bars ===
 // ===================
-*::-webkit-scrollbar{
-    width: 1em;
+*::-webkit-scrollbar {
+    width: 1em
 }
 
 *::-webkit-scrollbar-track {
@@ -243,58 +244,85 @@
 
 *::-webkit-scrollbar-thumb {
     background-color: @primary-dark;
-    border-radius: 3px;
+    border-radius: 3px
 }
 
-*::-webkit-scrollbar-corner{
-    background-color: @primary;
+*::-webkit-scrollbar-corner {
+    background-color: @primary
 }
 
 // ====================
 // === Social Icons ===
 // ====================
 
-.social-icon, .social-icon-pill {
+.social-icon,
+.social-icon-pill {
     @height: 60px;
-    height: @height;
-    width: @height;
-    line-height: @height;
     margin: 0 5px;
     border-radius: 50%;
-    background-color: blue;
     text-align: center;
     display: inline-block;
-    
-    .icon{
+
+    .icon {
+        height: @height;
+        width: @height;
+        line-height: @height;
         font-size: 2em;
+        text-align: center;
+        vertical-align: top;
+        float: left;
+        overflow: hidden;
+        border-radius: 5px
     }
-    
-    &.social-icon-pill{
+
+    &.social-icon-pill {
         width: 100%;
         border-radius: 5px;
         margin: 0;
-        .icon{
-            display: inline-block;
-            padding: 0 15px;
+
+        .icon {
+            display: inline-block
         }
-        .text{
+
+        .text {
             display: inline-block;
-            padding: 0 15px;
-            font-size: 1.5em;
+            font-size: 1.4rem;
+            line-height: @height;
+            font-weight: 600
         }
     }
 
-    &.github{
-        background-color: black;
+    @github-background: black;
+
+    &.github {
+        background-color: @github-background;
         color: white;
+
+        .icon {
+            background-color: lighten(@github-background, 10)
+        }
     }
-    &.linkedin{
-        background-color: #0077B5;
+
+    @linkedin-background: #0077B5;
+
+    &.linkedin {
+        background-color: @linkedin-background;
         color: white;
+
+        .icon {
+            background-color: lighten(@linkedin-background, 10)
+        }
     }
-    &.codepen{
+
+    @codepen-background: #212121;
+
+    &.codepen {
         background-color: #212121;
         color: white;
+
+        .icon {
+            background-color: lighten(@codepen-background, 10)
+        }
     }
 
     &:hover,
@@ -303,6 +331,6 @@
     &:visited,
     & {
         color: white;
-        text-decoration: none;
+        text-decoration: none
     }
 }
