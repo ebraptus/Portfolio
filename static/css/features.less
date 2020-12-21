@@ -41,6 +41,13 @@
     }
 }
 
+// ================
+// === Carousel ===
+// ================
+.carousel {
+    overflow-x: scroll;
+}
+
 // ===============
 // === Buttons ===
 // ===============
@@ -218,4 +225,25 @@
         width: 100%;
         padding: 10px 15px;
     }
+}
+
+// ===================
+// === Scroll Bars ===
+// ===================
+*::-webkit-scrollbar{
+    width: 1em;
+}
+
+*::-webkit-scrollbar-track {
+    background-color: @background-secondary;
+    border-radius: 3px
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: @primary-dark;
+    border-radius: 3px;
+}
+
+*::-webkit-scrollbar-corner{
+    background-color: @primary;
 }
