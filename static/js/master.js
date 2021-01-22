@@ -52,3 +52,44 @@ $(".card, .card-tall").each(function(){
         pCurrentCard.parent().css("margin-top", "2.5rem");
     }
 });
+
+//*************
+//* Slideshow *
+//*************
+$(".slideshow-new").each(function(){
+    const pCarousel = this;
+    var iSlideIndex = $(pCarousel).attr("data-index");
+
+    if(iSlideIndex == undefined || isNaN(iSlideIndex)){
+        iSlideIndex = 1;
+        $(pCarousel).attr("data-index", iSlideIndex);
+    }
+
+    console.log($(pCarousel).attr("data-index"));
+
+    $(pCarousel).children(".slideshow-left").html("<");
+    $(pCarousel).children(".slideshow-right").html(">");
+
+    $(pCarousel).children(".slideshow-left").click(function(){
+        var iSlideCount = $(pCarousel).children(".slide").length;
+        iSlideIndex--;
+        if(iSlideIndex < 1){
+            iSlideIndex = iSlideCount;
+        }
+        $(pCarousel).attr("data-index", iSlideIndex);
+        console.log("left: " + iSlideIndex);
+
+        $(pCarousel).children(".slide").css("left", -100 * (iSlideIndex - 1) + "%");
+    });
+
+    $(pCarousel).children(".slideshow-right").click(function(){
+        var iSlideCount = $(pCarousel).children(".slide").length;
+        iSlideIndex++;
+        if(iSlideIndex > iSlideCount){
+            iSlideIndex = 1;
+        }
+        $(pCarousel).attr("data-index", iSlideIndex);
+        console.log("right: " + iSlideIndex);
+        $(pCarousel).children(".slide").css("left", -100 * (iSlideIndex - 1) + "%");
+    });
+});

@@ -1,5 +1,6 @@
-@import "vars.less"; // ==================
+@import "vars.less";
 
+// ==================
 // === Slideshows ===
 // ==================
 .slideshow {
@@ -37,6 +38,42 @@
                 background-color: rgba(0, 0, 0, 0.5)
             }
         }
+    }
+}
+
+// =================
+// === Slideshow ===
+// =================
+.slideshow-new{
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    position: relative;
+    .slide{
+        position: relative;
+        flex-grow: 0;
+        flex-shrink: 0;
+        width: 100%;
+        padding: 0 30px;
+        left: 0;
+        transition: all 500ms ease;
+    }
+    .slideshow-left, .slideshow-right{
+        display: block;
+        position: absolute;
+        height: 100%;
+        line-height: auto;
+        width: 25px;
+        background-color: @primary-dark;
+        z-index: 1000;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .slideshow-left{
+        left: 0;
+    }
+    .slideshow-right{
+        right: 0;
     }
 }
 
